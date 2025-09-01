@@ -135,7 +135,7 @@
             <p><strong>Verzija sistema:</strong> 1.0.0</p>
             <p><strong>Tehnologija:</strong> ASP.NET Web Forms, C#, MS SQL Server</p>
             <p><strong>Arhitektura:</strong> 4-slojna aplikacija sa SOAP servisima</p>
-            <p><strong>Autor:</strong> Uroš Vidaković IT 67/17</p>
+            <p><strong>Autor:</strong></p>
         </div>
     </div>
 </asp:Content>
