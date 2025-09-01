@@ -1,0 +1,24 @@
+CREATE PROCEDURE sp_sveSednice
+    @id_saziva INT = NULL,
+    @id_zasedanja INT = NULL
+AS
+BEGIN
+    SELECT 
+        s.id_sednice,
+        s.naziv AS sednica_naziv,
+        s.datum AS sednica_datum,
+        s.opis AS sednica_opis,
+        z.id_zasedanja,
+        z.naziv_zasedanja,
+        sa.id_saziva,
+        sa.ime AS saziv_Ime,
+        sa.pocetak,
+        sa.kraj
+    FROM dbo.sednica s
+    LEFT JOIN dbo.zasedanje z ON s.zasedanje_id = z.id_zasedanja
+    LEFT JOIN dbo.saziv sa ON z.id_saziv = sa.id_saziva
+    WHERE (@id_saziva IS NULL OR sa.id_saziva = @id_saziva)
+      AND (@id_zasedanja IS NULL OR z.id_zasedanja = @id_zasedanja)
+    ORDER BY sa.id_saziva, z.id_zasedanja, s.id_sednice;
+END;
+GO

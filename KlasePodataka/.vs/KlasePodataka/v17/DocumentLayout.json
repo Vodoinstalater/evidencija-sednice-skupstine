@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\materijal\\ViseslojniASPnetSredjen\\1_SlojPodataka\\KlasePodataka\\KlasePodataka\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD0F4212-2425-4CA2-B575-4C7DE3B4EB03}|KlasePodataka\\KlasePodataka.csproj|c:\\posao2024-25\\drugi semestar\\rvs\\materijal\\viseslojniaspnetsredjen\\1_slojpodataka\\klasepodataka\\klasepodataka\\klasepodataka\\spnastavnikdbklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0F4212-2425-4CA2-B575-4C7DE3B4EB03}|KlasePodataka\\KlasePodataka.csproj|solutionrelative:klasepodataka\\spnastavnikdbklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD0F4212-2425-4CA2-B575-4C7DE3B4EB03}|KlasePodataka\\KlasePodataka.csproj|c:\\posao2024-25\\drugi semestar\\rvs\\materijal\\viseslojniaspnetsredjen\\1_slojpodataka\\klasepodataka\\klasepodataka\\klasepodataka\\spkorisnikdbklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0F4212-2425-4CA2-B575-4C7DE3B4EB03}|KlasePodataka\\KlasePodataka.csproj|solutionrelative:klasepodataka\\spkorisnikdbklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD0F4212-2425-4CA2-B575-4C7DE3B4EB03}|KlasePodataka\\KlasePodataka.csproj|c:\\posao2024-25\\drugi semestar\\rvs\\materijal\\viseslojniaspnetsredjen\\1_slojpodataka\\klasepodataka\\klasepodataka\\klasepodataka\\nastavniklistaklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0F4212-2425-4CA2-B575-4C7DE3B4EB03}|KlasePodataka\\KlasePodataka.csproj|solutionrelative:klasepodataka\\nastavniklistaklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD0F4212-2425-4CA2-B575-4C7DE3B4EB03}|KlasePodataka\\KlasePodataka.csproj|c:\\posao2024-25\\drugi semestar\\rvs\\materijal\\viseslojniaspnetsredjen\\1_slojpodataka\\klasepodataka\\klasepodataka\\klasepodataka\\nastavnikklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0F4212-2425-4CA2-B575-4C7DE3B4EB03}|KlasePodataka\\KlasePodataka.csproj|solutionrelative:klasepodataka\\nastavnikklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD0F4212-2425-4CA2-B575-4C7DE3B4EB03}|KlasePodataka\\KlasePodataka.csproj|c:\\posao2024-25\\drugi semestar\\rvs\\materijal\\viseslojniaspnetsredjen\\1_slojpodataka\\klasepodataka\\klasepodataka\\klasepodataka\\nastavnikdbklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0F4212-2425-4CA2-B575-4C7DE3B4EB03}|KlasePodataka\\KlasePodataka.csproj|solutionrelative:klasepodataka\\nastavnikdbklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SPNastavnikDBKlasa.cs",
+              "DocumentMoniker": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\materijal\\ViseslojniASPnetSredjen\\1_SlojPodataka\\KlasePodataka\\KlasePodataka\\KlasePodataka\\SPNastavnikDBKlasa.cs",
+              "RelativeDocumentMoniker": "KlasePodataka\\SPNastavnikDBKlasa.cs",
+              "ToolTip": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\materijal\\ViseslojniASPnetSredjen\\1_SlojPodataka\\KlasePodataka\\KlasePodataka\\KlasePodataka\\SPNastavnikDBKlasa.cs",
+              "RelativeToolTip": "KlasePodataka\\SPNastavnikDBKlasa.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAAAIwOAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T05:14:54.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SPKorisnikDBKlasa.cs",
+              "DocumentMoniker": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\materijal\\ViseslojniASPnetSredjen\\1_SlojPodataka\\KlasePodataka\\KlasePodataka\\KlasePodataka\\SPKorisnikDBKlasa.cs",
+              "RelativeDocumentMoniker": "KlasePodataka\\SPKorisnikDBKlasa.cs",
+              "ToolTip": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\materijal\\ViseslojniASPnetSredjen\\1_SlojPodataka\\KlasePodataka\\KlasePodataka\\KlasePodataka\\SPKorisnikDBKlasa.cs",
+              "RelativeToolTip": "KlasePodataka\\SPKorisnikDBKlasa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T05:13:55.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NastavnikListaKlasa.cs",
+              "DocumentMoniker": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\materijal\\ViseslojniASPnetSredjen\\1_SlojPodataka\\KlasePodataka\\KlasePodataka\\KlasePodataka\\NastavnikListaKlasa.cs",
+              "RelativeDocumentMoniker": "KlasePodataka\\NastavnikListaKlasa.cs",
+              "ToolTip": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\materijal\\ViseslojniASPnetSredjen\\1_SlojPodataka\\KlasePodataka\\KlasePodataka\\KlasePodataka\\NastavnikListaKlasa.cs",
+              "RelativeToolTip": "KlasePodataka\\NastavnikListaKlasa.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T05:11:51.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NastavnikDBKlasa.cs",
+              "DocumentMoniker": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\materijal\\ViseslojniASPnetSredjen\\1_SlojPodataka\\KlasePodataka\\KlasePodataka\\KlasePodataka\\NastavnikDBKlasa.cs",
+              "RelativeDocumentMoniker": "KlasePodataka\\NastavnikDBKlasa.cs",
+              "ToolTip": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\materijal\\ViseslojniASPnetSredjen\\1_SlojPodataka\\KlasePodataka\\KlasePodataka\\KlasePodataka\\NastavnikDBKlasa.cs",
+              "RelativeToolTip": "KlasePodataka\\NastavnikDBKlasa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T05:10:17.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NastavnikKlasa.cs",
+              "DocumentMoniker": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\materijal\\ViseslojniASPnetSredjen\\1_SlojPodataka\\KlasePodataka\\KlasePodataka\\KlasePodataka\\NastavnikKlasa.cs",
+              "RelativeDocumentMoniker": "KlasePodataka\\NastavnikKlasa.cs",
+              "ToolTip": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\materijal\\ViseslojniASPnetSredjen\\1_SlojPodataka\\KlasePodataka\\KlasePodataka\\KlasePodataka\\NastavnikKlasa.cs",
+              "RelativeToolTip": "KlasePodataka\\NastavnikKlasa.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T15:26:11.199Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

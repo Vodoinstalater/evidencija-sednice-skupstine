@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Penguin\\Desktop\\Ve\u017Eba 14\\Viseslojni Ispravan\\1_SlojPodataka\\TehnoloskeKlase\\DBUtils\\DBUtils\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{608C9905-AD39-4AAC-A050-354C3E6C36CD}|DBUtils\\DBUtils.csproj|c:\\users\\penguin\\desktop\\ve\u017Eba 14\\viseslojni ispravan\\1_slojpodataka\\tehnoloskeklase\\dbutils\\dbutils\\dbutils\\konekcijaklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{608C9905-AD39-4AAC-A050-354C3E6C36CD}|DBUtils\\DBUtils.csproj|solutionrelative:dbutils\\konekcijaklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{608C9905-AD39-4AAC-A050-354C3E6C36CD}|DBUtils\\DBUtils.csproj|C:\\Users\\Penguin\\Desktop\\Ve\u017Eba 14\\Viseslojni Ispravan\\1_SlojPodataka\\TehnoloskeKlase\\DBUtils\\DBUtils\\dbutils\\tabelaklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{608C9905-AD39-4AAC-A050-354C3E6C36CD}|DBUtils\\DBUtils.csproj|solutionrelative:dbutils\\tabelaklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KonekcijaKlasa.cs",
+              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\Ve\u017Eba 14\\Viseslojni Ispravan\\1_SlojPodataka\\TehnoloskeKlase\\DBUtils\\DBUtils\\DBUtils\\KonekcijaKlasa.cs",
+              "RelativeDocumentMoniker": "DBUtils\\KonekcijaKlasa.cs",
+              "ToolTip": "C:\\Users\\Penguin\\Desktop\\Ve\u017Eba 14\\Viseslojni Ispravan\\1_SlojPodataka\\TehnoloskeKlase\\DBUtils\\DBUtils\\DBUtils\\KonekcijaKlasa.cs",
+              "RelativeToolTip": "DBUtils\\KonekcijaKlasa.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAzwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:23:48.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TabelaKlasa.cs",
+              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\Ve\u017Eba 14\\Viseslojni Ispravan\\1_SlojPodataka\\TehnoloskeKlase\\DBUtils\\DBUtils\\DBUtils\\TabelaKlasa.cs",
+              "RelativeDocumentMoniker": "DBUtils\\TabelaKlasa.cs",
+              "ToolTip": "C:\\Users\\Penguin\\Desktop\\Ve\u017Eba 14\\Viseslojni Ispravan\\1_SlojPodataka\\TehnoloskeKlase\\DBUtils\\DBUtils\\DBUtils\\TabelaKlasa.cs",
+              "RelativeToolTip": "DBUtils\\TabelaKlasa.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwFEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:06:15.352Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3656D1C5-BFD8-40D4-9C1C-6C3974386BD7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KorisnickiInterfejs</RootNamespace>
+    <AssemblyName>KorisnickiInterfejs</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Layer 4 (UI) references - samo gornji slojevi -->
+    <Reference Include="KlaseMapiranja, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlaseMapiranja.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PrezentacionaLogika, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.dll</HintPath>
+    </Reference>
+    <Reference Include="PoslovnaLogika, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Sednica aplikacija - glavni fajlovi -->
+
+    <Content Include="Default.aspx" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="IstorijaGlasanja.aspx" />
+    <Content Include="IstorijaSednica.aspx" />
+    <Content Include="IstorijaZasedanja.aspx" />
+    <Content Include="IstorijaSaziva.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="PogledajMandate.aspx" />
+    <Content Include="PoslanikDashboard.aspx" />
+    <Content Include="NovaSednica.aspx" />
+    <Content Include="NovoZasedanje.aspx" />
+    <Content Include="NoviSaziv.aspx" />
+    <Content Include="UpravljajMandatima.aspx" />
+
+
+    <Content Include="Scripts\**" />
+    <Content Include="Styles\**" />
+    <Content Include="Web.config" />
+    <!-- Master stranice -->
+    <Content Include="SednicaAdmin.Master" />
+    <Content Include="Site.Master" />
+    <!-- Stilovi i skriptovi -->
+    <Content Include="Styles\Site.css" />
+
+    <!-- Web config fajlovi -->
+    <Content Include="Web.config" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Kod fajlovi - samo Sednica specifični -->
+
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PoslanikDashboard.aspx.cs">
+      <DependentUpon>PoslanikDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoslanikDashboard.aspx.designer.cs">
+      <DependentUpon>PoslanikDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IstorijaSednica.aspx.cs">
+      <DependentUpon>IstorijaSednica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IstorijaSednica.aspx.designer.cs">
+      <DependentUpon>IstorijaSednica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IstorijaZasedanja.aspx.cs">
+      <DependentUpon>IstorijaZasedanja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IstorijaZasedanja.aspx.designer.cs">
+      <DependentUpon>IstorijaZasedanja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IstorijaSaziva.aspx.cs">
+      <DependentUpon>IstorijaSaziva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IstorijaSaziva.aspx.designer.cs">
+      <DependentUpon>IstorijaSaziva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IstorijaGlasanja.aspx.cs">
+      <DependentUpon>IstorijaGlasanja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IstorijaGlasanja.aspx.designer.cs">
+      <DependentUpon>IstorijaGlasanja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PogledajMandate.aspx.cs">
+      <DependentUpon>PogledajMandate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PogledajMandate.aspx.designer.cs">
+      <DependentUpon>PogledajMandate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NovaSednica.aspx.cs">
+      <DependentUpon>NovaSednica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NovaSednica.aspx.designer.cs">
+      <DependentUpon>NovaSednica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NovoZasedanje.aspx.cs">
+      <DependentUpon>NovoZasedanje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NovoZasedanje.aspx.designer.cs">
+      <DependentUpon>NovoZasedanje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoviSaziv.aspx.cs">
+      <DependentUpon>NoviSaziv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoviSaziv.aspx.designer.cs">
+      <DependentUpon>NoviSaziv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpravljajMandatima.aspx.cs">
+      <DependentUpon>UpravljajMandatima.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpravljajMandatima.aspx.designer.cs">
+      <DependentUpon>UpravljajMandatima.aspx</DependentUpon>
+    </Compile>
+
+
+    <Compile Include="SednicaAdmin.Master.cs">
+      <DependentUpon>SednicaAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SednicaAdmin.Master.designer.cs">
+      <DependentUpon>SednicaAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DBUtils\DBUtils\DBUtils.csproj">
+      <Project>{608c9905-ad39-4aac-a050-354c3e6c36cd}</Project>
+      <Name>DBUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1718</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

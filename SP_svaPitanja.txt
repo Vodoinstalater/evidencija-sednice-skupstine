@@ -1,0 +1,21 @@
+CREATE PROCEDURE sp_sviGlasovi
+AS
+BEGIN
+    SELECT 
+        g.id_glasanja,
+        g.glas,
+        l.ime + ' ' + l.prezime AS ime_prezime,
+        p.id_pitanja,
+        p.redni_broj,
+        p.tekst AS pitanje,
+        s.id_sednice,
+        s.naziv AS sednica_Naziv,
+        s.datum AS sednica_Datum
+    FROM dbo.glasanje g
+    INNER JOIN dbo.lica l ON g.id_lica = l.id_lica
+    INNER JOIN dbo.pitanja p ON g.id_pitanja = p.id_pitanja
+    INNER JOIN dbo.dnevni_red dr ON p.id_dnevni_red = dr.id_dnevni_red
+    INNER JOIN dbo.sednica s ON dr.id_sednice = s.id_sednice
+    ORDER BY s.id_sednice, p.redni_broj, g.id_glasanja;
+END;
+GO

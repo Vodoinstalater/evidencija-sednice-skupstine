@@ -1,0 +1,149 @@
+-- =============================================
+-- Database: sednica3
+-- =============================================
+USE [sednica3]
+GO
+
+-- =============================================
+-- Table: dbo.pozicija
+-- =============================================
+CREATE TABLE [dbo].[pozicija](
+	[id_pozicije]    INT           NOT NULL,
+	[naziv_pozicije] VARCHAR(50)   NOT NULL,
+	CONSTRAINT [PK_pozicija] PRIMARY KEY CLUSTERED ([id_pozicije] ASC)
+);
+GO
+
+-- =============================================
+-- Table: dbo.stranka
+-- =============================================
+CREATE TABLE [dbo].[stranka](
+	[id_stranke]     INT           NOT NULL,
+	[naziv_stranke]  VARCHAR(50)   NOT NULL,
+	CONSTRAINT [PK_stranka] PRIMARY KEY CLUSTERED ([id_stranke] ASC)
+);
+GO
+
+-- =============================================
+-- Table: dbo.lica
+-- =============================================
+CREATE TABLE [dbo].[lica](
+	[id_lica]        INT           NOT NULL,
+	[ime]            VARCHAR(50)   NOT NULL,
+	[prezime]        VARCHAR(50)   NOT NULL,
+	[pozicija]       INT           NOT NULL,
+	[stranka]        INT           NOT NULL,
+	[pol]            CHAR(1)       NOT NULL,
+	[datumr]         DATE          NOT NULL,
+	[bio]            TEXT          NOT NULL,
+	[korisnicko_ime] VARCHAR(50)   NOT NULL,
+	[lozinka]	 VARCHAR(50)   NOT NULL,
+	CONSTRAINT [PK_lica] PRIMARY KEY CLUSTERED ([id_lica] ASC),
+	CONSTRAINT [FK_lica_pozicija] FOREIGN KEY ([pozicija]) REFERENCES [dbo].[pozicija] ([id_pozicije]),
+	CONSTRAINT [FK_lica_stranka] FOREIGN KEY ([stranka]) REFERENCES [dbo].[stranka] ([id_stranke]),
+ 	CONSTRAINT [UQ_korisnicko_ime] UNIQUE ([korisnicko_ime])
+);
+GO
+
+-- =============================================
+-- Table: dbo.saziv
+-- =============================================
+CREATE TABLE [dbo].[saziv](
+	[id_saziva]      INT           NOT NULL,
+	[ime]            VARCHAR(50)   NOT NULL,
+	[pocetak]        DATE          NOT NULL,
+	[kraj]           DATE          NOT NULL,
+	[opis]           TEXT          NOT NULL,
+	CONSTRAINT [PK_saziv] PRIMARY KEY CLUSTERED ([id_saziva] ASC)
+);
+GO
+
+-- =============================================
+-- Table: dbo.mandat
+-- =============================================
+CREATE TABLE [dbo].[mandat](
+	[id_mandata]     INT           NOT NULL,
+	[id_lica]        INT           NOT NULL,
+	[id_saziva]      INT           NOT NULL,
+	[id_stranke]     INT           NOT NULL,
+	CONSTRAINT [PK_mandat] PRIMARY KEY CLUSTERED ([id_mandata] ASC),
+	CONSTRAINT [FK_mandat_lica] FOREIGN KEY ([id_lica]) REFERENCES [dbo].[lica] ([id_lica]),
+	CONSTRAINT [FK_mandat_saziv] FOREIGN KEY ([id_saziva]) REFERENCES [dbo].[saziv] ([id_saziva])
+);
+GO
+
+-- =============================================
+-- Table: dbo.tipovi
+-- =============================================
+CREATE TABLE [dbo].[tipovi](
+	[id]             INT           NOT NULL,
+	[tip_zasedanja]  VARCHAR(50)   NOT NULL,
+	CONSTRAINT [PK_tipovi] PRIMARY KEY CLUSTERED ([id] ASC)
+);
+GO
+
+-- =============================================
+-- Table: dbo.zasedanje
+-- =============================================
+CREATE TABLE [dbo].[zasedanje](
+	[id_zasedanja]    INT           NOT NULL,
+	[tip]             INT           NOT NULL,
+	[naziv_zasedanja] VARCHAR(50)   NOT NULL,
+	[id_saziv]        INT           NOT NULL,
+	CONSTRAINT [PK_zasedanje] PRIMARY KEY CLUSTERED ([id_zasedanja] ASC),
+	CONSTRAINT [FK_zasedanje_saziv] FOREIGN KEY ([id_saziv]) REFERENCES [dbo].[saziv] ([id_saziva]),
+	CONSTRAINT [FK_zasedanje_tipovi] FOREIGN KEY ([tip]) REFERENCES [dbo].[tipovi] ([id])
+);
+GO
+
+-- =============================================
+-- Table: dbo.sednica
+-- =============================================
+CREATE TABLE [dbo].[sednica](
+	[id_sednice]     INT           NOT NULL,
+	[naziv]          VARCHAR(50)   NOT NULL,
+	[datum]          DATE          NOT NULL,
+	[opis]           TEXT          NOT NULL,
+	[zasedanje_id]   INT           NOT NULL,
+	CONSTRAINT [PK_sednica] PRIMARY KEY CLUSTERED ([id_sednice] ASC),
+	CONSTRAINT [FK_sednica_zasedanje] FOREIGN KEY ([zasedanje_id]) REFERENCES [dbo].[zasedanje] ([id_zasedanja])
+);
+GO
+
+-- =============================================
+-- Table: dbo.dnevni_red
+-- =============================================
+CREATE TABLE [dbo].[dnevni_red](
+	[id_dnevni_red]  INT           NOT NULL,
+	[id_sednice]     INT           NOT NULL,
+	CONSTRAINT [PK_dnevni_red] PRIMARY KEY CLUSTERED ([id_dnevni_red] ASC),
+	CONSTRAINT [FK_dnevni_red_sednica] FOREIGN KEY ([id_sednice]) REFERENCES [dbo].[sednica] ([id_sednice])
+);
+GO
+
+-- =============================================
+-- Table: dbo.pitanja
+-- =============================================
+CREATE TABLE [dbo].[pitanja](
+	[id_pitanja]     INT           NOT NULL,
+	[id_dnevni_red]  INT           NOT NULL,
+	[redni_broj]     INT           NOT NULL,
+	[tekst]          TEXT          NOT NULL,
+	CONSTRAINT [PK_pitanja] PRIMARY KEY CLUSTERED ([id_pitanja] ASC),
+	CONSTRAINT [FK_pitanja_dnevni_red] FOREIGN KEY ([id_dnevni_red]) REFERENCES [dbo].[dnevni_red] ([id_dnevni_red])
+);
+GO
+
+-- =============================================
+-- Table: dbo.glasanje
+-- =============================================
+CREATE TABLE [dbo].[glasanje](
+	[id_glasanja]    INT           NOT NULL,
+	[id_pitanja]     INT           NOT NULL,
+	[id_lica]        INT           NOT NULL,
+	[glas]           VARCHAR(10)   NOT NULL,
+	CONSTRAINT [PK_glasanje] PRIMARY KEY CLUSTERED ([id_glasanja] ASC),
+	CONSTRAINT [FK_glasanje_pitanja] FOREIGN KEY ([id_pitanja]) REFERENCES [dbo].[pitanja] ([id_pitanja]),
+	CONSTRAINT [FK_glasanje_lica] FOREIGN KEY ([id_lica]) REFERENCES [dbo].[lica] ([id_lica])
+);
+GO

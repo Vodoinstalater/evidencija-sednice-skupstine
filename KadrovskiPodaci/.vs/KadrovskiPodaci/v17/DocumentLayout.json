@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\Vezbe\\Vezba 14\\Viseslojni Ispravan\\3_SlojServisa\\WebServis\\KadrovskiPodaci\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5543AD-A906-41C7-BEFC-454BD49849A2}|KadrovskiPodaci\\KadrovskiPodaci.csproj|C:\\Posao2024-25\\Drugi Semestar\\RVS\\Vezbe\\Vezba 14\\Viseslojni Ispravan\\3_SlojServisa\\WebServis\\KadrovskiPodaci\\kadrovskipodaci\\ogranicenjazaposljavanja.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5543AD-A906-41C7-BEFC-454BD49849A2}|KadrovskiPodaci\\KadrovskiPodaci.csproj|solutionrelative:kadrovskipodaci\\ogranicenjazaposljavanja.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5543AD-A906-41C7-BEFC-454BD49849A2}|KadrovskiPodaci\\KadrovskiPodaci.csproj|c:\\posao2024-25\\drugi semestar\\rvs\\vezbe\\vezba 14\\viseslojni ispravan\\3_slojservisa\\webservis\\kadrovskipodaci\\kadrovskipodaci\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0C5543AD-A906-41C7-BEFC-454BD49849A2}|KadrovskiPodaci\\KadrovskiPodaci.csproj|solutionrelative:kadrovskipodaci\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5543AD-A906-41C7-BEFC-454BD49849A2}|KadrovskiPodaci\\KadrovskiPodaci.csproj|C:\\Posao2024-25\\Drugi Semestar\\RVS\\Vezbe\\Vezba 14\\Viseslojni Ispravan\\3_SlojServisa\\WebServis\\KadrovskiPodaci\\kadrovskipodaci\\xml\\ogranicenjasistematizacije.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0C5543AD-A906-41C7-BEFC-454BD49849A2}|KadrovskiPodaci\\KadrovskiPodaci.csproj|solutionrelative:kadrovskipodaci\\xml\\ogranicenjasistematizacije.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\Vezbe\\Vezba 14\\Viseslojni Ispravan\\3_SlojServisa\\WebServis\\KadrovskiPodaci\\KadrovskiPodaci\\Web.config",
+              "RelativeDocumentMoniker": "KadrovskiPodaci\\Web.config",
+              "ToolTip": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\Vezbe\\Vezba 14\\Viseslojni Ispravan\\3_SlojServisa\\WebServis\\KadrovskiPodaci\\KadrovskiPodaci\\Web.config",
+              "RelativeToolTip": "KadrovskiPodaci\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-07-12T14:15:14.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OgranicenjaSistematizacije.XML",
+              "DocumentMoniker": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\Vezbe\\Vezba 14\\Viseslojni Ispravan\\3_SlojServisa\\WebServis\\KadrovskiPodaci\\KadrovskiPodaci\\XML\\OgranicenjaSistematizacije.XML",
+              "RelativeDocumentMoniker": "KadrovskiPodaci\\XML\\OgranicenjaSistematizacije.XML",
+              "ToolTip": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\Vezbe\\Vezba 14\\Viseslojni Ispravan\\3_SlojServisa\\WebServis\\KadrovskiPodaci\\KadrovskiPodaci\\XML\\OgranicenjaSistematizacije.XML",
+              "RelativeToolTip": "KadrovskiPodaci\\XML\\OgranicenjaSistematizacije.XML",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-06-18T13:13:27.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OgranicenjaZaposljavanja.asmx.cs",
+              "DocumentMoniker": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\Vezbe\\Vezba 14\\Viseslojni Ispravan\\3_SlojServisa\\WebServis\\KadrovskiPodaci\\KadrovskiPodaci\\OgranicenjaZaposljavanja.asmx.cs",
+              "RelativeDocumentMoniker": "KadrovskiPodaci\\OgranicenjaZaposljavanja.asmx.cs",
+              "ToolTip": "C:\\Posao2024-25\\Drugi Semestar\\RVS\\Vezbe\\Vezba 14\\Viseslojni Ispravan\\3_SlojServisa\\WebServis\\KadrovskiPodaci\\KadrovskiPodaci\\OgranicenjaZaposljavanja.asmx.cs",
+              "RelativeToolTip": "KadrovskiPodaci\\OgranicenjaZaposljavanja.asmx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T21:30:47.061Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

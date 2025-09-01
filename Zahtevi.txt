@@ -1,0 +1,16 @@
+Tehnološki - OBAVEZNI DEO (20 POENA) – na osnovu datog template:
+ Tehnologija: ASP.NET (C#) programski jezici bazirani na kompajliranju i kreiranju biblioteka klasa koje se meĎusobno povezuju
+ Rad sa relacionom bazom podataka MS SQL Server, min 2 tabele povezane relacijama + korisnik, stored procedure, pogledi
+ Objektno-orjentisano rešenje sa nasleĎivanjem
+ Višeslojna aplikacija (više projekata koji su povezani)
+ Repository patern u sloju za rad sa podacima (primena dizajn šablona – metode za CRUD operacije)
+ SOAP veb servis
+ odvojena tehnologija i semantika u sloju za rad sa podacima
+ Class library za poslovnu logiku – klase poslovnih entiteta i implementacije poslovnih pravila (poslovne validacije, automatizmi i ogranicenja), pozivaju
+se iz prezentacione logike
+FUNKCIONALNI:
+ Barem 2 profila korisnika(administrator – unosi sifarnike, obican korisnik – koristi ekranske forme za unos podataka u vezi poslovnog
+procesa) i funkcije prikaza i pretrage za neprijavljenog korisnika
+ Funkcije – login, CRUD operacije (unos, brisanje, izmena, tabelarni prikaz sa filterom), stampa, parametarska štampa,
+ Osnovne validacije na korisničkom interfejsu (provera ispravnosti unetih podataka – sve popunjeno, dužina stringa, jedinstvenost zapisa)
+ Poslovne validacije – usklaĎenost sa ograničenjem poslovnog pravila ili automatizam poslovne logike

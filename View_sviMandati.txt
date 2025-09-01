@@ -1,0 +1,11 @@
+CREATE VIEW v_sviMandati
+AS
+SELECT 
+    l.ime + ' ' + l.prezime AS puno_Ime,
+    st.naziv_stranke AS stranka,
+    sa.ime AS saziv
+FROM dbo.mandat m
+INNER JOIN dbo.lica l ON m.id_lica = l.id_lica
+INNER JOIN dbo.stranka st ON m.id_stranke = st.id_stranke
+INNER JOIN dbo.saziv sa ON m.id_saziva = sa.id_saziva;
+GO

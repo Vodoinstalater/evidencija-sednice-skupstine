@@ -1,0 +1,47 @@
+C:\Users\student\Documents\Visual Studio 2010\Projects\se2 cas 7 grupa 2\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.dll
+C:\Users\student\Documents\Visual Studio 2010\Projects\se2 cas 7 grupa 2\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.pdb
+C:\Users\student\Documents\Visual Studio 2010\Projects\se2 cas 7 grupa 2\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.dll
+C:\Users\student\Documents\Visual Studio 2010\Projects\se2 cas 7 grupa 2\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.pdb
+c:\Users\student\Documents\Visual Studio 2010\Projects\Se2 cas 10 grupa 2\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.dll
+c:\Users\student\Documents\Visual Studio 2010\Projects\Se2 cas 10 grupa 2\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.pdb
+c:\Users\student\Documents\Visual Studio 2010\Projects\Se2 cas 10 grupa 2\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.dll
+c:\Users\student\Documents\Visual Studio 2010\Projects\Se2 cas 10 grupa 2\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.pdb
+C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.dll
+C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.pdb
+C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.dll
+C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.pdb
+c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.dll
+c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.pdb
+c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.dll
+c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.pdb
+C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.dll
+C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.pdb
+C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.dll
+C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.pdb
+d:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.dll
+d:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.pdb
+d:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.dll
+d:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.pdb
+d:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\DBUtils.dll
+d:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\bin\Debug\DBUtils.pdb
+D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.csproj.AssemblyReference.cache
+D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.csproj.CoreCompileInputs.cache
+D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\KlasePodataka\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.csproj.CopyComplete
+C:\Users\Penguin\Desktop\Sednica\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.csproj.AssemblyReference.cache
+C:\Users\Penguin\Desktop\Sednica\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.csproj.CoreCompileInputs.cache
+C:\Users\Penguin\Desktop\Sednica\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.dll
+C:\Users\Penguin\Desktop\Sednica\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.pdb
+C:\Users\Penguin\Desktop\Sednica\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.dll
+C:\Users\Penguin\Desktop\Sednica\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.pdb
+C:\Users\Penguin\Desktop\Sednica\KlasePodataka\KlasePodataka\bin\Debug\DBUtils.dll
+C:\Users\Penguin\Desktop\Sednica\KlasePodataka\KlasePodataka\bin\Debug\DBUtils.pdb
+C:\Users\Penguin\Desktop\Sednica\KlasePodataka\KlasePodataka\obj\Debug\KlasePod.C2AE2122.Up2Date
+C:\Users\Penguin\Desktop\Skupstina\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.dll
+C:\Users\Penguin\Desktop\Skupstina\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.pdb
+C:\Users\Penguin\Desktop\Skupstina\KlasePodataka\KlasePodataka\bin\Debug\DBUtils.dll
+C:\Users\Penguin\Desktop\Skupstina\KlasePodataka\KlasePodataka\bin\Debug\DBUtils.pdb
+C:\Users\Penguin\Desktop\Skupstina\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.csproj.AssemblyReference.cache
+C:\Users\Penguin\Desktop\Skupstina\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.csproj.CoreCompileInputs.cache
+C:\Users\Penguin\Desktop\Skupstina\KlasePodataka\KlasePodataka\obj\Debug\KlasePod.C2AE2122.Up2Date
+C:\Users\Penguin\Desktop\Skupstina\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.dll
+C:\Users\Penguin\Desktop\Skupstina\KlasePodataka\KlasePodataka\obj\Debug\KlasePodataka.pdb

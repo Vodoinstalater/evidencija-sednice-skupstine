@@ -1,0 +1,46 @@
+C:\Users\student\Documents\Visual Studio 2010\Projects\se2cas5grupa2\RESENJE\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.dll
+C:\Users\student\Documents\Visual Studio 2010\Projects\se2cas5grupa2\RESENJE\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.pdb
+C:\Users\student\Documents\Visual Studio 2010\Projects\se2cas5grupa2\RESENJE\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.dll
+C:\Users\student\Documents\Visual Studio 2010\Projects\se2cas5grupa2\RESENJE\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.pdb
+D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.dll
+D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.pdb
+D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.csproj.AssemblyReference.cache
+D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.csproj.CoreCompileInputs.cache
+D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.dll
+D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.pdb
+C:\Posao2024-25\Drugi Semestar\RVS\Vezbe\Vezba 14\Viseslojni Ispravan\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.dll.config
+C:\Posao2024-25\Drugi Semestar\RVS\Vezbe\Vezba 14\Viseslojni Ispravan\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.dll
+C:\Posao2024-25\Drugi Semestar\RVS\Vezbe\Vezba 14\Viseslojni Ispravan\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.pdb
+C:\Posao2024-25\Drugi Semestar\RVS\Vezbe\Vezba 14\Viseslojni Ispravan\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.csproj.AssemblyReference.cache
+C:\Posao2024-25\Drugi Semestar\RVS\Vezbe\Vezba 14\Viseslojni Ispravan\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.csproj.CoreCompileInputs.cache
+C:\Posao2024-25\Drugi Semestar\RVS\Vezbe\Vezba 14\Viseslojni Ispravan\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.dll
+C:\Posao2024-25\Drugi Semestar\RVS\Vezbe\Vezba 14\Viseslojni Ispravan\3_SlojServisa\WebServis\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.pdb
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.dll.config
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.dll
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.pdb
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\bin\KlasePodataka.dll
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\bin\PoslovnaLogika.dll
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\bin\DBUtils.dll
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\bin\PoslovnaLogika.pdb
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\bin\PoslovnaLogika.dll.config
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\bin\KlasePodataka.pdb
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\bin\DBUtils.pdb
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.csproj.AssemblyReference.cache
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.csproj.CoreCompileInputs.cache
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\Kadrovsk.30F40289.Up2Date
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.dll
+C:\Users\Penguin\Desktop\Sednica\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.pdb
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.dll.config
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.dll
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\bin\KadrovskiPodaci.pdb
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\bin\KlasePodataka.dll
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\bin\PoslovnaLogika.dll
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\bin\DBUtils.dll
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\bin\PoslovnaLogika.pdb
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\bin\KlasePodataka.pdb
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\bin\DBUtils.pdb
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.csproj.AssemblyReference.cache
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.csproj.CoreCompileInputs.cache
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\Kadrovsk.30F40289.Up2Date
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.dll
+C:\Users\Penguin\Desktop\Skupstina\KadrovskiPodaci\KadrovskiPodaci\obj\Debug\KadrovskiPodaci.pdb

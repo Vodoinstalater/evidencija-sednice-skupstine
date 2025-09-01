@@ -1,0 +1,275 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SednicaAdmin.Master.cs" Inherits="KorisnickiInterfejs.SednicaAdmin" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evidencija Sednica Skupštine Srbije</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .header p {
+            margin: 5px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .container {
+            display: flex;
+            min-height: calc(100vh - 120px);
+        }
+        
+        .left-sidebar {
+            width: 300px;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .right-content {
+            flex: 1;
+            padding: 30px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+        
+        .sidebar-section h3 {
+            color: #ecf0f1;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .nav-link {
+            display: block;
+            padding: 12px 15px;
+            color: #bdc3c7;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .nav-link:hover {
+            background: #34495e;
+            color: white;
+            border-left-color: #3498db;
+            transform: translateX(5px);
+        }
+        
+        .nav-link.active {
+            background: #3498db;
+            color: white;
+            border-left-color: #2980b9;
+        }
+        
+        .public-section {
+            background: #27ae60;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .public-section h3 {
+            color: white;
+            border-bottom: 2px solid #2ecc71;
+            margin-bottom: 15px;
+        }
+        
+        .public-nav-link {
+            display: block;
+            padding: 10px 15px;
+            color: #ecf0f1;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .public-nav-link:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(3px);
+        }
+        
+        .user-info {
+            background: #34495e;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .user-info h4 {
+            margin: 0 0 10px 0;
+            color: #3498db;
+        }
+        
+        .user-info p {
+            margin: 5px 0;
+            color: #bdc3c7;
+        }
+        
+        .logout-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+            transition: background 0.3s ease;
+        }
+        
+        .logout-btn:hover {
+            background: #c0392b;
+        }
+        
+        .content-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .content-header h2 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 2em;
+        }
+        
+        .content-header p {
+            color: #7f8c8d;
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <h1>🏛️ Evidencija Sednica Skupštine Srbije</h1>
+            <p>Sistem za upravljanje parlamentarnim aktivnostima</p>
+        </div>
+        
+        <div class="container">
+            <!-- Left Sidebar - Privileged Functions -->
+            <div class="left-sidebar">
+                <!-- User Info Section -->
+                <div class="user-info">
+                    <h4>👤 Korisnik</h4>
+                    <p id="userName" runat="server">Učitavanje...</p>
+                    <p id="userRole" runat="server">Učitavanje...</p>
+                    <asp:Button ID="btnLogout" runat="server" Text="Odjavi se" CssClass="logout-btn" OnClick="btnLogout_Click" />
+                </div>
+                
+                <!-- Role-Specific Functions -->
+                <div class="sidebar-section">
+                    <h3>🔐 Privilegovane Funkcije</h3>
+                    
+                    <!-- Predsednik Functions (pozicija 2) -->
+                    <div id="predsednikFunctions" runat="server" visible="false">
+                        <asp:HyperLink ID="lnkNoviSaziv" runat="server" NavigateUrl="~/NoviSaziv.aspx" CssClass="nav-link">
+                            🏛️ Konstituiši novi saziv
+                        </asp:HyperLink>
+                        <asp:HyperLink ID="lnkUpravljajMandatima" runat="server" NavigateUrl="~/UpravljajMandatima.aspx" CssClass="nav-link">
+                            👥 Upravljaj mandatima
+                        </asp:HyperLink>
+                    </div>
+                    
+                    <!-- Potpredsednik Functions (pozicija 3) -->
+                    <div id="potpredsednikFunctions" runat="server" visible="false">
+                        <asp:HyperLink ID="lnkSazoviSednicu" runat="server" NavigateUrl="~/NovaSednica.aspx" CssClass="nav-link">
+                            📋 Sazovi novu sednicu
+                        </asp:HyperLink>
+                        <asp:HyperLink ID="lnkOtvoriZasedanje" runat="server" NavigateUrl="~/NovoZasedanje.aspx" CssClass="nav-link">
+                            🎯 Otvori novo zasedanje
+                        </asp:HyperLink>
+                    </div>
+                    
+                    <!-- Poslanik Functions (pozicija 1,4,5,6) -->
+                    <div id="poslanikFunctions" runat="server" visible="false">
+                        <p style="color: #95a5a6; font-style: italic; text-align: center; padding: 20px;">
+                            Poslanici imaju pristup samo javnim funkcijama
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Public Functions - All Roles Can Access -->
+                <div class="public-section">
+                    <h3>🌐 Javne Funkcije</h3>
+                    <asp:HyperLink ID="lnkIstorijaSednica" runat="server" NavigateUrl="~/IstorijaSednica.aspx" CssClass="public-nav-link">
+                        📚 Istorija sednica
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="lnkIstorijaZasedanja" runat="server" NavigateUrl="~/IstorijaZasedanja.aspx" CssClass="public-nav-link">
+                        🗓️ Istorija zasedanja
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="lnkIstorijaSaziva" runat="server" NavigateUrl="~/IstorijaSaziva.aspx" CssClass="public-nav-link">
+                        🏛️ Istorija saziva
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="lnkIstorijaGlasanja" runat="server" NavigateUrl="~/IstorijaGlasanja.aspx" CssClass="public-nav-link">
+                        🗳️ Istorija glasanja
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="lnkPogledajMandate" runat="server" NavigateUrl="~/PogledajMandate.aspx" CssClass="public-nav-link">
+                        👥 Pogledaj mandate
+                    </asp:HyperLink>
+                </div>
+            </div>
+            
+            <!-- Right Content Area -->
+            <div class="right-content">
+                <div class="content-header">
+                    <h2 id="pageTitle" runat="server">Dobrodošli</h2>
+                    <p id="pageDescription" runat="server">Izaberite funkciju iz levog menija</p>
+                </div>
+                
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 Evidencija Sednica Skupštine Srbije. Sva prava zadržana.</p>
+        </div>
+    </form>
+</body>
+</html>
