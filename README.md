@@ -8,3 +8,5 @@ To do:
 * Entity Framework
 * MVC
 * REST
+* Print
+* Export
