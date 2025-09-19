@@ -113,7 +113,7 @@ namespace KadrovskiPodaci
         {
             try
             {
-                return _poslovnaLogika.DajSveMandate();
+                return _poslovnaLogika.DajSveMandateZaPregled();
             }
             catch (Exception ex)
             {

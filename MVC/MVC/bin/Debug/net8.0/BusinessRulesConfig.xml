@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BusinessRules>
+  <!-- Poslovna pravila za sednice -->
+  <Sednica>
+    <MinDanaZaSednicu>50</MinDanaZaSednicu>
+    <MaxDanaUBuducnosti>3650</MaxDanaUBuducnosti>
+  </Sednica>
+  
+  <!-- Poslovna pravila za lica -->
+  <Lica>
+    <MinStarost>18</MinStarost>
+    <MinDuzinaLozinke>6</MinDuzinaLozinke>
+    <MaxDuzinaLozinke>50</MaxDuzinaLozinke>
+  </Lica>
+  
+  <!-- Poslovna pravila za sazive -->
+  <Saziv>
+    <MinDanaIzmedjuSaziva>1</MinDanaIzmedjuSaziva>
+    <MaxDuzinaSaziva>1825</MaxDuzinaSaziva>
+  </Saziv>
+  
+  <!-- Poslovna pravila za zasedanja -->
+  <Zasedanje>
+    <MinDanaUnapred>1</MinDanaUnapred>
+  </Zasedanje>
+  
+  <!-- Poslovna pravila za mandate -->
+  <Mandat>
+    <MaxMandataPoLici>1</MaxMandataPoLici>
+  </Mandat>
+  
+  <!-- Poslovna pravila za glasanje -->
+  <Glasanje>
+    <MoguciGlasovi>
+      <Glas>Za</Glas>
+      <Glas>Protiv</Glas>
+      <Glas>Uzdržan</Glas>
+    </MoguciGlasovi>
+  </Glasanje>
+  
+  <!-- Poslovna pravila za pozicije -->
+  <Pozicije>
+    <Predsednik>2</Predsednik>
+    <Potpredsednik>3</Potpredsednik>
+    <Poslanici>1,4,5,6</Poslanici>
+  </Pozicije>
+  
+  <!-- Poslovna pravila za akcije -->
+  <Akcije>
+    <SazoviNovuSednicu>SazoviNovuSednicu</SazoviNovuSednicu>
+    <OtvoriNovoZasedanje>OtvoriNovoZasedanje</OtvoriNovoZasedanje>
+    <PogledajSednice>PogledajSednice</PogledajSednice>
+    <PogledajZasedanja>PogledajZasedanja</PogledajZasedanja>
+    <PogledajSazive>PogledajSazive</PogledajSazive>
+    <PogledajMandate>PogledajMandate</PogledajMandate>
+    <IstorijaGlasanja>IstorijaGlasanja</IstorijaGlasanja>
+  </Akcije>
+</BusinessRules>

@@ -1,0 +1,167 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\RestServis\\RestServis\\RestServis.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\DBUtils\\DBUtils\\DBUtils.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\DBUtils\\DBUtils\\DBUtils.csproj",
+        "projectName": "DBUtils",
+        "projectPath": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\DBUtils\\DBUtils\\DBUtils.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\KlaseMapiranja\\KlaseMapiranja\\KlaseMapiranja.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\KlaseMapiranja\\KlaseMapiranja\\KlaseMapiranja.csproj",
+        "projectName": "KlaseMapiranja",
+        "projectPath": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\KlaseMapiranja\\KlaseMapiranja\\KlaseMapiranja.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\KlasePodataka\\KlasePodataka\\KlasePodataka.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\KlasePodataka\\KlasePodataka\\KlasePodataka.csproj",
+        "projectName": "KlasePodataka",
+        "projectPath": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\KlasePodataka\\KlasePodataka\\KlasePodataka.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\PoslovnaLogika\\PoslovnaLogika\\PoslovnaLogika.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\PoslovnaLogika\\PoslovnaLogika\\PoslovnaLogika.csproj",
+        "projectName": "PoslovnaLogika",
+        "projectPath": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\PoslovnaLogika\\PoslovnaLogika\\PoslovnaLogika.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\RestServis\\RestServis\\RestServis.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\RestServis\\RestServis\\RestServis.csproj",
+        "projectName": "RestServis",
+        "projectPath": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\RestServis\\RestServis\\RestServis.csproj",
+        "packagesPath": "C:\\Users\\Penguin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\RestServis\\RestServis\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Penguin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\DBUtils\\DBUtils\\DBUtils.csproj": {
+                "projectPath": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\DBUtils\\DBUtils\\DBUtils.csproj"
+              },
+              "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\KlaseMapiranja\\KlaseMapiranja\\KlaseMapiranja.csproj": {
+                "projectPath": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\KlaseMapiranja\\KlaseMapiranja\\KlaseMapiranja.csproj"
+              },
+              "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\KlasePodataka\\KlasePodataka\\KlasePodataka.csproj": {
+                "projectPath": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\KlasePodataka\\KlasePodataka\\KlasePodataka.csproj"
+              },
+              "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\PoslovnaLogika\\PoslovnaLogika\\PoslovnaLogika.csproj": {
+                "projectPath": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\PoslovnaLogika\\PoslovnaLogika\\PoslovnaLogika.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

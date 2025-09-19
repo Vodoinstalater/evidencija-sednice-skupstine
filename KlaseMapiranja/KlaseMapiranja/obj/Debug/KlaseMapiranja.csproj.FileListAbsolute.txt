@@ -1,45 +1,26 @@
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlaseMapiranja.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlaseMapiranja.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlasePodataka.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlasePodataka.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.csprojResolveAssemblyReference.cache
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlaseMapiranja.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlaseMapiranja.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlasePodataka.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\bin\Debug\DBUtils.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlasePodataka.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\bin\Debug\DBUtils.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.csproj.AssemblyReference.cache
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.csproj.CoreCompileInputs.cache
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\3_SlojServisa\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.csproj.CopyComplete
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.csproj.AssemblyReference.cache
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.csproj.CoreCompileInputs.cache
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.dll
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.pdb
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlaseMapiranja.dll
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlaseMapiranja.pdb
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlasePodataka.dll
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\bin\Debug\PoslovnaLogika.dll
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\bin\Debug\DBUtils.dll
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlasePodataka.pdb
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\bin\Debug\PoslovnaLogika.pdb
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\bin\Debug\PoslovnaLogika.dll.config
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\bin\Debug\DBUtils.pdb
-C:\Users\Penguin\Desktop\Sednica\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMap.5F7FA346.Up2Date
 C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlaseMapiranja.dll
 C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlaseMapiranja.pdb
+C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\DBUtils.dll
 C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlasePodataka.dll
 C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\PoslovnaLogika.dll
-C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\DBUtils.dll
+C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\DBUtils.pdb
 C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlasePodataka.pdb
 C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\PoslovnaLogika.pdb
-C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\DBUtils.pdb
 C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.csproj.AssemblyReference.cache
 C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.csproj.CoreCompileInputs.cache
 C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMap.5F7FA346.Up2Date
 C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.dll
 C:\Users\Penguin\Desktop\Skupstina\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlaseMapiranja.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlaseMapiranja.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\DBUtils.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlasePodataka.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\PoslovnaLogika.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\DBUtils.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\KlasePodataka.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\bin\Debug\PoslovnaLogika.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.csproj.AssemblyReference.cache
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.csproj.CoreCompileInputs.cache
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMap.5F7FA346.Up2Date
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\KlaseMapiranja\KlaseMapiranja\obj\Debug\KlaseMapiranja.pdb

@@ -385,21 +385,21 @@
                        placeholder="Unesite opis sednice..." />
         </div>
         
-        <!-- Pravilo 7 dana - objašnjenje za hitne sednice -->
+        <!-- Pravilo konfigurisanih dana - objašnjenje za hitne sednice -->
         <div class="form-group" id="sevenDayRuleSection" style="display: none;">
             <div class="alert alert-warning">
-                <h5>⚠️ Pravilo 7 dana</h5>
+                <h5>⚠️ Pravilo <span id="minDanaSpan1">50</span> dana</h5>
                 <p>
-                    Sednica je zakazana manje od 7 dana unapred. Prema poslovnim pravilima, 
+                    Sednica je zakazana manje od <span id="minDanaSpan">50</span> dana unapred. Prema poslovnim pravilima, 
                     potrebno je navesti razlog za hitno sazivanje sednice.
                 </p>
             </div>
             <label for="txtRazlogHitnosti">Razlog za hitno sazivanje sednice:</label>
             <asp:TextBox ID="txtRazlogHitnosti" runat="server" CssClass="form-control" 
                        TextMode="MultiLine" Rows="3" 
-                       placeholder="Unesite razlog zašto je sednica hitna i zašto se saziva manje od 7 dana unapred..." />
+                       placeholder="Unesite razlog zašto je sednica hitna i zašto se saziva manje od konfigurisanih dana unapred..." />
             <small class="form-text text-muted">
-                Ovo polje je obavezno kada se sednica zakazuje manje od 7 dana unapred.
+                Ovo polje je obavezno kada se sednica zakazuje manje od <span id="minDanaSpan2">50</span> dana unapred.
             </small>
         </div>
         
@@ -417,6 +417,9 @@
             
             <!-- Hidden field to store all questions -->
             <asp:HiddenField ID="hdnQuestions" runat="server" />
+            
+            <!-- Hidden field to store min days configuration -->
+            <asp:HiddenField ID="hdnMinDanaZaSednicu" runat="server" />
         </div>
 
         <div class="form-actions">
@@ -437,11 +440,11 @@
             za glasanje poslanicima. Nakon kreiranja sednice, možete dodati dodatna pitanja ili 
             modifikovati postojeća.
         </p>
-        <h5>📅 Pravilo 7 dana</h5>
+        <h5>📅 Pravilo <span id="minDanaSpan3">50</span> dana</h5>
         <p>
-            Prema poslovnim pravilima, ako se sednica zakazuje manje od 7 dana unapred, 
+            Prema poslovnim pravilima, ako se sednica zakazuje manje od <span id="minDanaSpan4">50</span> dana unapred, 
             potrebno je navesti razlog za hitno sazivanje. Sistem će automatski prikazati 
-            polje za unos razloga kada izaberete datum koji je manje od 7 dana od danas.
+            polje za unos razloga kada izaberete datum koji je manje od <span id="minDanaSpan5">50</span> dana od danas.
         </p>
     </div>
 
@@ -452,6 +455,21 @@
 
     <script>
         let questionCounter = 2;
+        let minDanaZaSednicu = 50; // Default vrednost
+        
+        // Ažuriraj sve span elemente sa dinamičkom vrednošću
+        document.addEventListener('DOMContentLoaded', function() {
+            // Učitaj konfiguraciju poslovnih pravila
+            const hiddenField = document.getElementById('<%= hdnMinDanaZaSednicu.ClientID %>');
+            if (hiddenField && hiddenField.value) {
+                minDanaZaSednicu = parseInt(hiddenField.value);
+            }
+            
+            const spans = document.querySelectorAll('[id^="minDanaSpan"]');
+            spans.forEach(span => {
+                span.textContent = minDanaZaSednicu;
+            });
+        });
 
         function addQuestion() {
             const container = document.getElementById('questionsContainer');
@@ -560,25 +578,21 @@
             }
         });
 
-        // Set default date to today
+        // Initialize page when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
-            const today = new Date().toISOString().split('T')[0];
             const dateInput = document.getElementById('<%= txtDatumSednice.ClientID %>');
-            if (dateInput) {
-                dateInput.value = today;
-            }
             
-            // Proveri pravilo 7 dana na učitavanju stranice
+            // Proveri pravilo konfigurisanih dana na učitavanju stranice
             checkSevenDayRule();
             
-            // Dodaj event listener za datum da proveri pravilo 7 dana
+            // Dodaj event listener za datum da proveri pravilo konfigurisanih dana
             if (dateInput) {
                 dateInput.addEventListener('change', checkSevenDayRule);
                 dateInput.addEventListener('input', checkSevenDayRule);
             }
         });
 
-        // Funkcija za proveru pravila 7 dana
+        // Funkcija za proveru pravila konfigurisanih dana
         function checkSevenDayRule() {
             const dateInput = document.getElementById('<%= txtDatumSednice.ClientID %>');
             const sevenDaySection = document.getElementById('sevenDayRuleSection');
@@ -592,16 +606,16 @@
                 
                 console.log('Razlika u danima:', daysDiff);
                 
-                // Ako je manje od 7 dana, prikaži sekciju za razlog
-                if (daysDiff < 7) {
+                // Ako je manje od konfigurisanih dana, prikaži sekciju za razlog
+                if (daysDiff < minDanaZaSednicu) {
                     sevenDaySection.style.display = 'block';
                     reasonInput.setAttribute('required', 'required');
-                    console.log('Prikazujem sekciju za pravilo 7 dana');
+                    console.log('Prikazujem sekciju za pravilo ' + minDanaZaSednicu + ' dana');
                 } else {
                     sevenDaySection.style.display = 'none';
                     reasonInput.removeAttribute('required');
                     reasonInput.value = '';
-                    console.log('Sakrivam sekciju za pravilo 7 dana');
+                    console.log('Sakrivam sekciju za pravilo ' + minDanaZaSednicu + ' dana');
                 }
             }
         }
@@ -617,9 +631,9 @@
                 const timeDiff = selectedDate.getTime() - today.getTime();
                 const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
                 
-                // Ako je manje od 7 dana i nema razloga, prikaži grešku
-                if (daysDiff < 7 && (!reasonInput.value || reasonInput.value.trim() === '')) {
-                    alert('Greška: Kada se sednica zakazuje manje od 7 dana unapred, potrebno je navesti razlog za hitno sazivanje.');
+                // Ako je manje od konfigurisanih dana i nema razloga, prikaži grešku
+                if (daysDiff < minDanaZaSednicu && (!reasonInput.value || reasonInput.value.trim() === '')) {
+                    alert('Greška: Kada se sednica zakazuje manje od ' + minDanaZaSednicu + ' dana unapred, potrebno je navesti razlog za hitno sazivanje.');
                     reasonInput.focus();
                     return false;
                 }

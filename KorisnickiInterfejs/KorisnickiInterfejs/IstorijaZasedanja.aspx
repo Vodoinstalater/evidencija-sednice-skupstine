@@ -175,63 +175,15 @@
             border-color: #007bff;
         }
         
-        .stats-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 25px;
-        }
-        
-        .stat-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            border-left: 4px solid #28a745;
-        }
-        
-        .stat-number {
-            font-size: 2em;
-            font-weight: bold;
-            color: #28a745;
-            margin-bottom: 5px;
-        }
-        
-        .stat-label {
-            color: #6c757d;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="content-header">
         <h2>🗓️ Istorija Zasedanja</h2>
-        <p>Pregled svih zasedanja skupštine sa statistikama i mogućnošću pretrage</p>
+        <p>Pregled svih zasedanja skupštine sa mogućnošću pretrage</p>
     </div>
     
-    <!-- Statistics Cards -->
-    <div class="stats-cards">
-        <div class="stat-card">
-            <asp:Label ID="lblUkupnoZasedanja" runat="server" Text="0" CssClass="stat-number"></asp:Label>
-            <div class="stat-label">Ukupno Zasedanja</div>
-        </div>
-        <div class="stat-card">
-            <asp:Label ID="lblAktivnaZasedanja" runat="server" Text="0" CssClass="stat-number"></asp:Label>
-            <div class="stat-label">Aktivna Zasedanja</div>
-        </div>
-        <div class="stat-card">
-            <asp:Label ID="lblZavrsenaZasedanja" runat="server" Text="0" CssClass="stat-number"></asp:Label>
-            <div class="stat-label">Završena Zasedanja</div>
-        </div>
-        <div class="stat-card">
-            <asp:Label ID="lblUkupnoSednica" runat="server" Text="0" CssClass="stat-number"></asp:Label>
-            <div class="stat-label">Ukupno Sednica</div>
-        </div>
-    </div>
     
     <!-- Search Section -->
     <div class="search-section">
@@ -290,8 +242,8 @@
     <div style="margin-top: 20px; padding: 15px; background: #e8f5e8; border-radius: 8px; border-left: 4px solid #28a745;">
         <h4 style="margin: 0 0 10px 0; color: #1e7e34;">ℹ️ Informacije</h4>
         <p style="margin: 0; color: #155724; font-size: 14px;">
-            Ova stranica prikazuje istoriju svih zasedanja skupštine sa detaljnim statistikama. Možete koristiti filter 
-                            za pretragu po sazivu. Kliknite na "Pretraži" za primenu filtera ili "Resetuj" za uklanjanje filtera.
+            Ova stranica prikazuje istoriju svih zasedanja skupštine. Možete koristiti filter 
+            za pretragu po sazivu. Kliknite na "Pretraži" za primenu filtera ili "Resetuj" za uklanjanje filtera.
         </p>
     </div>
 </asp:Content>

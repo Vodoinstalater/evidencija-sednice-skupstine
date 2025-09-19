@@ -16,5 +16,7 @@ namespace KorisnickiInterfejs
             // Redirect to the login page
             Response.Redirect("~/Login.aspx");
         }
+
+
     }
 }

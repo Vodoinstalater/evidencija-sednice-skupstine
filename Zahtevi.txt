@@ -1,0 +1,38 @@
+Tehnološki - OBAVEZNI DEO (20 POENA) – na osnovu datog template:
+ Tehnologija: ASP.NET (C#) programski jezici bazirani na kompajliranju i kreiranju biblioteka klasa koje se meĎusobno povezuju
+ Rad sa relacionom bazom podataka MS SQL Server, min 2 tabele povezane relacijama + korisnik, stored procedure, pogledi
+ Objektno-orjentisano rešenje sa nasleĎivanjem
+ Višeslojna aplikacija (više projekata koji su povezani)
+ Repository patern u sloju za rad sa podacima (primena dizajn šablona – metode za CRUD operacije)
+ SOAP veb servis
+ odvojena tehnologija i semantika u sloju za rad sa podacima
+ Class library za poslovnu logiku – klase poslovnih entiteta i implementacije poslovnih pravila (poslovne validacije, automatizmi i ogranicenja), pozivaju
+se iz prezentacione logike
+FUNKCIONALNI:
+ Barem 2 profila korisnika(administrator – unosi sifarnike, obican korisnik – koristi ekranske forme za unos podataka u vezi poslovnog
+procesa) i funkcije prikaza i pretrage za neprijavljenog korisnika
+ Funkcije – login, CRUD operacije (unos, brisanje, izmena, tabelarni prikaz sa filterom), stampa, parametarska štampa,
+ Osnovne validacije na korisničkom interfejsu (provera ispravnosti unetih podataka – sve popunjeno, dužina stringa, jedinstvenost zapisa)
+ Poslovne validacije – usklaĎenost sa ograničenjem poslovnog pravila ili automatizam poslovne logike
+
+Popravke:
+1) Ne vidim da ste uradili stampu i parametarsku stampu. Mozda je i uradjeno, samo ja ne vidim u korisnickom interfejsu.
+
+2) Ne vidim u kodu gde koristite stored procedure i poglede.
+
+3) Poslovna logika:
+1. U poslovnoj logici treba da su samo uslovi, a rad sa podacima je samo u kontekstu pribavljanja podataka za odlucivanje, ne i konkretnih aktivnosti sa podacima.
+
+2. U poslovnoj logici treba odvojiti u posebne metode - Da li ima barem jedno pitanje za dnevni red, da li je datum iz proslosti, da li je zakazana sednica blagovremeno, da li je lice punoletno....
+
+3. U poslovnoj logici ne sme da bude fiksnih vrednosti, npr. broj 7 za razliku dana, za starost 18 godina itd. Taj broj 7 mora biti u nekom XML ili JSON fajlu i da se ucitava dinamicki i koristi - znaci, pravila poslovne logike moraju biti parametrizovana.
+~~~~~~~~~~~~~~~~
+
+Tehnološki - OPCIONO ZA VIŠE BODOVA (20 POENA):
+1. (5 poena) MVC i MVVM arhitektura, prezentaciona logika (View Model) kao class library koja priprema podatke za prikaz ili preuzima komande i
+podatke i prosledjuje dubljim slojevima na obradu
+2. (2 poena) izrada i primena interfejs klasa i dependency injection (primena SOLID principa)
+3. (4 poena) primena Entity framework
+4. (4 poena) REST veb servis
+5. (3 poena) Osnovne validacije unosa korisnikovih podataka primenom Java Scripta i Validator Klasa na korisnickom interfejsu
+6. (2 poena) validacija bezbednog korišćenja softverskog servisa primenom tokena

@@ -1,27 +1,3 @@
-C:\Users\student\Documents\Visual Studio 2010\Projects\se2\01cas01grupa\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\bin\Debug\DBUtils.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\se2\01cas01grupa\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\bin\Debug\DBUtils.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\se2\01cas01grupa\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\obj\Debug\DBUtils.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\se2\01cas01grupa\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\obj\Debug\DBUtils.pdb
-c:\Users\student\Documents\Visual Studio 2010\Projects\se2\02 cas grupa 1\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\bin\Debug\DBUtils.dll
-c:\Users\student\Documents\Visual Studio 2010\Projects\se2\02 cas grupa 1\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\bin\Debug\DBUtils.pdb
-c:\Users\student\Documents\Visual Studio 2010\Projects\se2\02 cas grupa 1\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\obj\Debug\DBUtils.dll
-c:\Users\student\Documents\Visual Studio 2010\Projects\se2\02 cas grupa 1\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\obj\Debug\DBUtils.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SK 2017_18 SE2\03 cas prva grupa\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\bin\Debug\DBUtils.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SK 2017_18 SE2\03 cas prva grupa\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\bin\Debug\DBUtils.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SK 2017_18 SE2\03 cas prva grupa\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\obj\Debug\DBUtils.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SK 2017_18 SE2\03 cas prva grupa\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\obj\Debug\DBUtils.pdb
-d:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\bin\Debug\DBUtils.dll
-d:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\bin\Debug\DBUtils.pdb
-d:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\obj\Debug\DBUtils.dll
-d:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\obj\Debug\DBUtils.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\obj\Debug\DBUtils.csproj.AssemblyReference.cache
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\1_SlojPodataka\TehnoloskeKlase\DBUtils\DBUtils\DBUtils\obj\Debug\DBUtils.csproj.CoreCompileInputs.cache
-C:\Users\Penguin\Desktop\Sednica\DBUtils\DBUtils\bin\Debug\DBUtils.dll
-C:\Users\Penguin\Desktop\Sednica\DBUtils\DBUtils\bin\Debug\DBUtils.pdb
-C:\Users\Penguin\Desktop\Sednica\DBUtils\DBUtils\obj\Debug\DBUtils.csproj.AssemblyReference.cache
-C:\Users\Penguin\Desktop\Sednica\DBUtils\DBUtils\obj\Debug\DBUtils.csproj.CoreCompileInputs.cache
-C:\Users\Penguin\Desktop\Sednica\DBUtils\DBUtils\obj\Debug\DBUtils.dll
-C:\Users\Penguin\Desktop\Sednica\DBUtils\DBUtils\obj\Debug\DBUtils.pdb
 C:\Users\Penguin\Desktop\Skupstina\DBUtils\DBUtils\bin\Debug\DBUtils.dll
 C:\Users\Penguin\Desktop\Skupstina\DBUtils\DBUtils\bin\Debug\DBUtils.pdb
 C:\Users\Penguin\Desktop\Skupstina\DBUtils\DBUtils\obj\Debug\DBUtils.csproj.AssemblyReference.cache

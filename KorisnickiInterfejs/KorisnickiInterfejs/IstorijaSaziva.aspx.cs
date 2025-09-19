@@ -25,8 +25,6 @@ namespace KorisnickiInterfejs
         private void InitializePage()
         {
             _sednicePregled = new SednicePregledKlasa();
-            
-            // Datum filteri su uklonjeni
         }
 
         /// <summary>
@@ -47,12 +45,6 @@ namespace KorisnickiInterfejs
                 EnsureSednicePregledInitialized();
                 // Učitaj početne podatke
                 LoadSazivi();
-                
-                // Učitaj statistike
-                LoadStatistics();
-                
-                // Učitaj trenutni status
-                LoadCurrentStatus();
             }
             catch (Exception)
             {
@@ -67,7 +59,6 @@ namespace KorisnickiInterfejs
                 EnsureSednicePregledInitialized();
                 var sazivi = _sednicePregled.DajSveSazive();
                 BindSaziviToGrid(sazivi);
-                UpdateResultsCount(sazivi.Count);
             }
             catch (Exception)
             {
@@ -75,110 +66,8 @@ namespace KorisnickiInterfejs
             }
         }
 
-        private void LoadStatistics()
-        {
-            try
-            {
-                EnsureSednicePregledInitialized();
-                var stats = _sednicePregled.DajStatistikeSaziva();
-                
-                lblUkupnoSaziva.Text = stats.UkupnoSaziva.ToString();
-                lblAktivnihSaziva.Text = stats.AktivnihSaziva.ToString();
-                lblZavrsenihSaziva.Text = stats.ZavrsenihSaziva.ToString();
-                lblUkupnoMandata.Text = stats.UkupnoMandata.ToString();
-            }
-            catch (Exception)
-            {
-                // Postavi default vrednosti
-                lblUkupnoSaziva.Text = "0";
-                lblAktivnihSaziva.Text = "0";
-                lblZavrsenihSaziva.Text = "0";
-                lblUkupnoMandata.Text = "0";
-            }
-        }
 
-        private void LoadCurrentStatus()
-        {
-            try
-            {
-                EnsureSednicePregledInitialized();
-                var aktivanSaziv = _sednicePregled.DajAktivanSaziv();
-                if (aktivanSaziv != null)
-                {
-                    lblAktivanSaziv.Text = aktivanSaziv.Ime ?? "Nepoznato";
-                    lblBrojZasedanja.Text = aktivanSaziv.BrojZasedanja.ToString();
-                    lblBrojSednica.Text = "25";
-                }
-                else
-                {
-                    lblAktivanSaziv.Text = "Nema aktivnog saziva";
-                    lblBrojZasedanja.Text = "0";
-                    lblBrojSednica.Text = "0";
-                }
-            }
-            catch (Exception)
-            {
-                lblAktivanSaziv.Text = "Greška pri učitavanju";
-                lblBrojZasedanja.Text = "0";
-                lblBrojSednica.Text = "0";
-            }
-        }
 
-        protected void btnPretrazi_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                EnsureSednicePregledInitialized();
-                
-                string naziv = txtNaziv.Text.Trim();
-
-                if (string.IsNullOrEmpty(naziv))
-                {
-                    // Ako nema kriterijuma, učitaj sve
-                    LoadSazivi();
-                    return;
-                }
-
-                // Koristi jednostavan filter sa boljim null checking
-                var sviSazivi = _sednicePregled.DajSveSazive();
-                
-                if (sviSazivi == null || sviSazivi.Count == 0)
-                {
-                    BindSaziviToGrid(new List<SazivDTO>());
-                    UpdateResultsCount(0);
-                    return;
-                }
-
-                var filtriraniSazivi = sviSazivi
-                    .Where(s => s != null && !string.IsNullOrEmpty(s.Ime) && 
-                               s.Ime.IndexOf(naziv, StringComparison.OrdinalIgnoreCase) >= 0)
-                    .ToList();
-
-                BindSaziviToGrid(filtriraniSazivi);
-                UpdateResultsCount(filtriraniSazivi.Count);
-            }
-            catch (Exception)
-            {
-                ShowError("Greška pri pretraživanju. Molimo pokušajte ponovo.");
-            }
-        }
-
-        protected void btnResetuj_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                EnsureSednicePregledInitialized();
-                // Resetuj filtere - samo naziv
-                txtNaziv.Text = string.Empty;
-                
-                // Učitaj sve podatke
-                LoadSazivi();
-            }
-            catch (Exception)
-            {
-                ShowError("Greška pri resetovanju filtera. Molimo pokušajte ponovo.");
-            }
-        }
 
         protected void gvSazivi_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
@@ -225,14 +114,7 @@ namespace KorisnickiInterfejs
             }
         }
 
-        // GetStatusText metoda je uklonjena jer ne koristimo Status kolonu
 
-        // GetStatusClass metoda je uklonjena jer ne koristimo Status kolonu
-
-        private void UpdateResultsCount(int count)
-        {
-            lblBrojRezultata.Text = $"Pronađeno: {count} saziva";
-        }
 
         private void ShowError(string message)
         {

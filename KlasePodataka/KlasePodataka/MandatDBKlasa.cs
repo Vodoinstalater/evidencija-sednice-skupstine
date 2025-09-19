@@ -21,6 +21,8 @@ namespace KlasePodataka
                 SELECT 
                     m.id_mandata,
                     l.id_lica,
+                    l.ime,
+                    l.prezime,
                     l.ime + ' ' + l.prezime AS ime_prezime,
                     l.korisnicko_ime,
                     l.pol,
@@ -50,6 +52,8 @@ namespace KlasePodataka
                 SELECT 
                     m.id_mandata,
                     l.id_lica,
+                    l.ime,
+                    l.prezime,
                     l.ime + ' ' + l.prezime AS ime_prezime,
                     l.korisnicko_ime,
                     l.pol,
@@ -118,6 +122,8 @@ namespace KlasePodataka
                 SELECT 
                     m.id_mandata,
                     l.id_lica,
+                    l.ime,
+                    l.prezime,
                     l.ime + ' ' + l.prezime AS ime_prezime,
                     l.korisnicko_ime,
                     l.pol,

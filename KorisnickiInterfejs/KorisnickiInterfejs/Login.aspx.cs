@@ -65,9 +65,6 @@ namespace KorisnickiInterfejs
                     Session["KorisnickoIme"] = sednicaLogin.KorisnickoIme;
                     Session["SednicaLoginObjekat"] = sednicaLogin;
 
-                    // Uspesna prijava - sacuvaj korisnika u sesiju
-                    Session["SednicaLoginObjekat"] = sednicaLogin;
-
                     // redirekcija na Dashboard sa novim master page-om
                     Response.Redirect("Dashboard.aspx");
                 }
@@ -79,7 +76,7 @@ namespace KorisnickiInterfejs
             catch (Exception ex)
             {
                 // logiraj grešku i prikaži generičku poruku
-                PrikaziGresku("Greška prilikom prijave. Molimo pokušajte ponovo.");
+                PrikaziGresku($"Greška prilikom prijave: {ex.Message}. Molimo pokušajte ponovo.");
             }
         }
 

@@ -103,7 +103,7 @@
             <div class="stat-number">
                 <asp:Label ID="lblBrojZasedanja" runat="server" Text="0"></asp:Label>
             </div>
-            <div class="stat-label">Aktivna zasedanja</div>
+            <div class="stat-label">Ukupno zasedanja</div>
         </div>
         
         <div class="stat-card">

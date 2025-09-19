@@ -102,6 +102,24 @@ namespace KorisnickiInterfejs
         protected global::System.Web.UI.WebControls.Button btnResetuj;
         
         /// <summary>
+        /// btnExportuj control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExportuj;
+        
+        /// <summary>
+        /// btnStampa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnStampa;
+        
+        /// <summary>
         /// lblBrojRezultata control.
         /// </summary>
         /// <remarks>

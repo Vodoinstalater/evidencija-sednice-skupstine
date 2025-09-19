@@ -48,6 +48,8 @@ namespace KlasePodataka
                     SELECT 
                         g.id_glasanja,
                         g.glas,
+                        l.ime,
+                        l.prezime,
                         l.ime + ' ' + l.prezime AS ime_prezime,
                         p.id_pitanja,
                         p.redni_broj,
@@ -82,6 +84,8 @@ namespace KlasePodataka
                     SELECT 
                         g.id_glasanja,
                         g.glas,
+                        l.ime,
+                        l.prezime,
                         l.ime + ' ' + l.prezime AS ime_prezime,
                         p.id_pitanja,
                         p.redni_broj,

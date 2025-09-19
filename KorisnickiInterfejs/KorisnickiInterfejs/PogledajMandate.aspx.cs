@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text;
+using System.IO;
 using PrezentacionaLogika;
 using KlaseMapiranja;
 
@@ -34,7 +36,16 @@ namespace KorisnickiInterfejs
         {
             if (_sednicePregled == null)
             {
-                _sednicePregled = new SednicePregledKlasa();
+                try
+                {
+                    _sednicePregled = new SednicePregledKlasa();
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Greška pri inicijalizaciji SednicePregledKlasa: {ex.Message}");
+                    // Ako ne može da se inicijalizuje, kreiraj novi objekat
+                    _sednicePregled = new SednicePregledKlasa();
+                }
             }
         }
 
@@ -43,20 +54,28 @@ namespace KorisnickiInterfejs
             try
             {
                 EnsureSednicePregledInitialized();
+                
                 // Učitaj dropdown-ove
                 LoadSazivi();
                 LoadPozicije();
                 LoadStranke();
                 
-                // Učitaj statistike
-                LoadStatistics();
-                
                 // Učitaj početne podatke
                 LoadMandate();
+                
+                // Učitaj statistike na kraju
+                LoadStatistics();
             }
             catch (Exception ex)
             {
-                ShowError("Greška pri učitavanju podataka. Molimo pokušajte ponovo.");
+                // Log grešku ali ne prikazuj je korisniku
+                System.Diagnostics.Debug.WriteLine($"Greška pri učitavanju početnih podataka: {ex.Message}");
+                
+                // Postavi default vrednosti
+                lblUkupnoMandata.Text = "0";
+                lblAktivnihMandata.Text = "0";
+                lblPoslanika.Text = "0";
+                lblStranaka.Text = "0";
             }
         }
 
@@ -142,19 +161,32 @@ namespace KorisnickiInterfejs
             try
             {
                 EnsureSednicePregledInitialized();
-                var mandate = _sednicePregled.DajSveMandate();
                 
-                if (mandate != null && mandate.Count > 0)
+                if (_sednicePregled != null)
                 {
-                    int ukupno = mandate.Count;
-                    int aktivnih = mandate.Count; // Svi mandate su aktivni u trenutnom sazivu
-                    int poslanika = mandate.Select(m => m.IdLica).Distinct().Count();
-                    int stranaka = mandate.Select(m => m.NazivStranke).Distinct().Count();
+                    // Uzmi sve mandate za statistike
+                    var sviMandati = _sednicePregled.DajSveMandate();
+                    var aktivniMandati = _sednicePregled.DajMandateZaAktivanSaziv();
+                    
+                    if (sviMandati != null && sviMandati.Count > 0)
+                    {
+                        int ukupno = sviMandati.Count;
+                        int aktivnih = aktivniMandati?.Count ?? 0;
+                        int poslanika = sviMandati.Select(m => m.IdLica).Distinct().Count();
+                        int stranaka = sviMandati.Select(m => m.NazivStranke).Distinct().Count();
 
-                    lblUkupnoMandata.Text = ukupno.ToString();
-                    lblAktivnihMandata.Text = aktivnih.ToString();
-                    lblPoslanika.Text = poslanika.ToString();
-                    lblStranaka.Text = stranaka.ToString();
+                        lblUkupnoMandata.Text = ukupno.ToString();
+                        lblAktivnihMandata.Text = aktivnih.ToString();
+                        lblPoslanika.Text = poslanika.ToString();
+                        lblStranaka.Text = stranaka.ToString();
+                    }
+                    else
+                    {
+                        lblUkupnoMandata.Text = "0";
+                        lblAktivnihMandata.Text = "0";
+                        lblPoslanika.Text = "0";
+                        lblStranaka.Text = "0";
+                    }
                 }
                 else
                 {
@@ -180,14 +212,22 @@ namespace KorisnickiInterfejs
             {
                 EnsureSednicePregledInitialized();
                 
-                // Učitaj realne podatke iz baze podataka
-                var mandate = _sednicePregled.DajSveMandate();
-                
-                if (mandate != null && mandate.Count > 0)
+                if (_sednicePregled != null)
                 {
-                    var dt = ConvertMandateToDataTable(mandate);
-                    BindMandateToGrid(dt);
-                    UpdateResultsCount(dt.Rows.Count);
+                    // Učitaj sve mandate
+                    var mandate = _sednicePregled.DajSveMandate();
+                    
+                    if (mandate != null && mandate.Count > 0)
+                    {
+                        var dt = ConvertMandateToDataTable(mandate);
+                        BindMandateToGrid(dt);
+                        UpdateResultsCount(dt.Rows.Count);
+                    }
+                    else
+                    {
+                        BindMandateToGrid(new DataTable());
+                        UpdateResultsCount(0);
+                    }
                 }
                 else
                 {
@@ -197,7 +237,12 @@ namespace KorisnickiInterfejs
             }
             catch (Exception ex)
             {
-                ShowError("Greška pri učitavanju mandata. Molimo pokušajte ponovo.");
+                // Log grešku ali ne prikazuj je korisniku
+                System.Diagnostics.Debug.WriteLine($"Greška pri učitavanju mandata: {ex.Message}");
+                
+                // Prikaži prazan rezultat
+                BindMandateToGrid(new DataTable());
+                UpdateResultsCount(0);
             }
         }
 
@@ -215,7 +260,7 @@ namespace KorisnickiInterfejs
                 foreach (var mandat in mandate)
                 {
                     dt.Rows.Add(
-                        mandat.ImeLica ?? "",
+                        $"{mandat.ImeLica ?? ""} {mandat.PrezimeLica ?? ""}".Trim(),
                         mandat.NazivStranke ?? "",
                         mandat.NazivPozicije ?? "",
                         mandat.NazivSaziva ?? "",
@@ -231,56 +276,79 @@ namespace KorisnickiInterfejs
         {
             try
             {
+                // Osiguraj da je _sednicePregled inicijalizovan
                 EnsureSednicePregledInitialized();
                 
-                // Prikupljaj filtere
-                int? sazivId = null;
-                if (!string.IsNullOrEmpty(ddlSaziv.SelectedValue) && ddlSaziv.SelectedValue != "")
+                // Uzmi sve mandate i filtriraj ih u UI layer-u
+                var sviMandati = _sednicePregled.DajSveMandate();
+                
+                if (sviMandati != null && sviMandati.Count > 0)
                 {
-                    int.TryParse(ddlSaziv.SelectedValue, out int tempId);
-                    sazivId = tempId;
-                }
-                
-                string pozicijaNaziv = ddlPozicija.SelectedValue;
-                if (pozicijaNaziv == "-- Sve pozicije --")
-                {
-                    pozicijaNaziv = null;
-                }
-                
-                string strankaNaziv = ddlStranka.SelectedValue;
-                if (strankaNaziv == "-- Sve stranke --")
-                {
-                    strankaNaziv = null;
-                }
-                
-                string imePrezime = txtImePrezime.Text.Trim();
-                
-                // Koristi novu filter metodu - za sada ne prosleđujemo poziciju i stranku ID jer koristimo nazive
-                var mandate = _sednicePregled.PretraziMandate(sazivId, null, null, imePrezime);
-                
-                if (mandate != null && mandate.Count > 0)
-                {
-                    // Primeni pozicija filter ako je postavljen
-                    if (!string.IsNullOrEmpty(pozicijaNaziv))
+                    var filtriraniMandati = sviMandati;
+                    
+                    // Primeni saziv filter
+                    if (!string.IsNullOrEmpty(ddlSaziv.SelectedValue) && ddlSaziv.SelectedValue != "")
                     {
-                        var preFilterCount = mandate.Count;
-                        mandate = mandate.Where(m => 
+                        if (int.TryParse(ddlSaziv.SelectedValue, out int sazivId))
+                        {
+                            filtriraniMandati = filtriraniMandati.Where(m => m.IdSaziva == sazivId).ToList();
+                        }
+                    }
+                    
+                    // Primeni pozicija filter
+                    string pozicijaNaziv = ddlPozicija.SelectedValue;
+                    if (!string.IsNullOrEmpty(pozicijaNaziv) && pozicijaNaziv != "-- Sve pozicije --")
+                    {
+                        filtriraniMandati = filtriraniMandati.Where(m => 
                             !string.IsNullOrEmpty(m.NazivPozicije) && 
                             m.NazivPozicije.Equals(pozicijaNaziv, StringComparison.OrdinalIgnoreCase)
                         ).ToList();
                     }
                     
-                    // Primeni stranka filter ako je postavljen
-                    if (!string.IsNullOrEmpty(strankaNaziv))
+                    // Primeni stranka filter
+                    string strankaNaziv = ddlStranka.SelectedValue;
+                    if (!string.IsNullOrEmpty(strankaNaziv) && strankaNaziv != "-- Sve stranke --")
                     {
-                        var preFilterCount = mandate.Count;
-                        mandate = mandate.Where(m => 
+                        filtriraniMandati = filtriraniMandati.Where(m => 
                             !string.IsNullOrEmpty(m.NazivStranke) && 
                             m.NazivStranke.Equals(strankaNaziv, StringComparison.OrdinalIgnoreCase)
                         ).ToList();
                     }
                     
-                    var dt = ConvertMandateToDataTable(mandate);
+                    // Primeni ime/prezime filter - siguran pristup
+                    string imePrezime = txtImePrezime.Text.Trim();
+                    if (!string.IsNullOrEmpty(imePrezime))
+                    {
+                        try
+                        {
+                            var tempList = new List<MandatDTO>();
+                            foreach (var m in filtriraniMandati)
+                            {
+                                if (m != null)
+                                {
+                                    // Bezbedno kreiranje kombinovanog imena
+                                    string ime = m.ImeLica ?? "";
+                                    string prezime = m.PrezimeLica ?? "";
+                                    string imePrezimeKombinacija = $"{ime} {prezime}".Trim();
+                                    
+                                    // Pretraži u kombinovanom polju
+                                    if (!string.IsNullOrEmpty(imePrezimeKombinacija) && 
+                                        imePrezimeKombinacija.IndexOf(imePrezime, StringComparison.OrdinalIgnoreCase) >= 0)
+                                    {
+                                        tempList.Add(m);
+                                    }
+                                }
+                            }
+                            filtriraniMandati = tempList;
+                        }
+                        catch (Exception nameEx)
+                        {
+                            // Ako ime/prezime filter pravi problem, preskoči ga
+                            System.Diagnostics.Debug.WriteLine($"Greška pri ime/prezime filteru: {nameEx.Message}");
+                        }
+                    }
+                    
+                    var dt = ConvertMandateToDataTable(filtriraniMandati);
                     BindMandateToGrid(dt);
                     UpdateResultsCount(dt.Rows.Count);
                 }
@@ -292,7 +360,12 @@ namespace KorisnickiInterfejs
             }
             catch (Exception ex)
             {
-                ShowError("Greška pri pretraživanju. Molimo pokušajte ponovo.");
+                // Log grešku ali ne prikazuj je korisniku da ne bi došlo do logout-a
+                System.Diagnostics.Debug.WriteLine($"Greška pri pretraživanju mandata: {ex.Message}");
+                
+                // Prikaži prazan rezultat umesto greške
+                BindMandateToGrid(new DataTable());
+                UpdateResultsCount(0);
             }
         }
 
@@ -336,11 +409,17 @@ namespace KorisnickiInterfejs
             {
                 gvMandate.DataSource = mandate;
                 gvMandate.DataBind();
+                
+                // Sačuvaj podatke u ViewState za export funkcionalnost
+                ViewState["CurrentMandateData"] = mandate;
             }
             else
             {
                 gvMandate.DataSource = null;
                 gvMandate.DataBind();
+                
+                // Očisti ViewState
+                ViewState["CurrentMandateData"] = null;
             }
         }
 
@@ -353,5 +432,102 @@ namespace KorisnickiInterfejs
         {
             // Možete implementirati prikaz greške (npr. Label ili JavaScript alert)
         }
+
+        /// <summary>
+        /// Exportuje trenutno prikazane mandate u CSV format
+        /// </summary>
+        protected void btnExportuj_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Uzmi podatke direktno iz ViewState
+                var mandate = GetCurrentGridViewData();
+                
+                if (mandate != null && mandate.Rows.Count > 0)
+                {
+                    // Koristi univerzalnu export funkcionalnost
+                    ExportUtility.ExportToCSV(mandate, "mandati", Response);
+                }
+                else
+                {
+                    ShowError("Nema podataka za export. Molimo prvo pretražite mandate.");
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowError("Greška pri exportovanju. Molimo pokušajte ponovo.");
+            }
+        }
+
+        /// <summary>
+        /// Dohvata trenutno prikazane podatke iz ViewState
+        /// </summary>
+        private DataTable GetCurrentGridViewData()
+        {
+            try
+            {
+                // Uzmi podatke iz ViewState
+                if (ViewState["CurrentMandateData"] != null)
+                {
+                    return ViewState["CurrentMandateData"] as DataTable;
+                }
+                
+                return new DataTable();
+            }
+            catch (Exception)
+            {
+                return new DataTable();
+            }
+        }
+
+        /// <summary>
+        /// Dohvata listu aktivnih filtera za prikaz u stampi
+        /// </summary>
+        private List<string> GetActiveFilters()
+        {
+            var activeFilters = new List<string>();
+            
+            if (!string.IsNullOrEmpty(txtImePrezime.Text.Trim()))
+                activeFilters.Add($"Ime/Prezime: {txtImePrezime.Text.Trim()}");
+            if (ddlSaziv.SelectedIndex > 0)
+                activeFilters.Add($"Saziv: {ddlSaziv.SelectedItem.Text}");
+            if (ddlPozicija.SelectedIndex > 0)
+                activeFilters.Add($"Pozicija: {ddlPozicija.SelectedItem.Text}");
+            if (ddlStranka.SelectedIndex > 0)
+                activeFilters.Add($"Stranka: {ddlStranka.SelectedItem.Text}");
+            
+            return activeFilters;
+        }
+
+        /// <summary>
+        /// Generiše stampu trenutno prikazanih mandata
+        /// </summary>
+        protected void btnStampa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Uzmi podatke direktno iz ViewState
+                var mandate = GetCurrentGridViewData();
+                
+                if (mandate != null && mandate.Rows.Count > 0)
+                {
+                    // Pripremi aktivne filtere za prikaz
+                    var activeFilters = GetActiveFilters();
+                    
+                    // Koristi univerzalnu stampa funkcionalnost
+                    ExportUtility.ExportToHTML(mandate, "stampa_mandati", "Stampa Mandata", 
+                        "Skupština - Pregled mandata", activeFilters, Response);
+                }
+                else
+                {
+                    ShowError("Nema podataka za stampu. Molimo prvo pretražite mandate.");
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowError("Greška pri generisanju stampe. Molimo pokušajte ponovo.");
+            }
+        }
+
     }
 }

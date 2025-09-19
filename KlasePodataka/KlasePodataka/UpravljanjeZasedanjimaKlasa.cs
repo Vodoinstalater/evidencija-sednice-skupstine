@@ -256,5 +256,49 @@ namespace KlasePodataka
                 return null;
             }
         }
+
+        /// <summary>
+        /// Kreira novo zasedanje sa validacijom
+        /// </summary>
+        public bool KreirajNovoZasedanjeSaValidacijom(string naziv, DateTime datum, string opis, int tipId, out string poruka)
+        {
+            poruka = "";
+            try
+            {
+                // Dohvati aktivan saziv
+                UpravljanjeSazivimaKlasa upravljanjeSazivima = new UpravljanjeSazivimaKlasa(_konekcija);
+                SazivKlasa aktivanSaziv = upravljanjeSazivima.DajAktivanSaziv();
+                if (aktivanSaziv == null)
+                {
+                    poruka = "Ne postoji aktivan saziv. Prvo kreirajte novi saziv.";
+                    return false;
+                }
+
+                // Kreiraj zasedanje objekat
+                ZasedanjeKlasa novoZasedanje = new ZasedanjeKlasa
+                {
+                    Naziv_zasedanja = naziv,
+                    Tip = tipId,
+                    Id_saziv = aktivanSaziv.Id_saziva
+                };
+
+                // Koristi postojeću metodu
+                bool uspesno = KreirajNovoZasedanje(novoZasedanje);
+                if (uspesno)
+                {
+                    poruka = "Zasedanje je uspešno kreirano.";
+                }
+                else
+                {
+                    poruka = "Greška pri kreiranju zasedanja.";
+                }
+                return uspesno;
+            }
+            catch (Exception ex)
+            {
+                poruka = $"Greška pri kreiranju zasedanja: {ex.Message}";
+                return false;
+            }
+        }
     }
 }

@@ -1,36 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Penguin\\Desktop\\Skupstina\\Skupstina\\",
+  "WorkspaceRootPath": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\Skupstina\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3656D1C5-BFD8-40D4-9C1C-6C3974386BD7}|..\\KorisnickiInterfejs\\KorisnickiInterfejs\\KorisnickiInterfejs.csproj|c:\\users\\penguin\\desktop\\skupstina\\korisnickiinterfejs\\korisnickiinterfejs\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{6E1E6C15-41E1-4AF7-AA73-B88A86A7FECF}|..\\PoslovnaLogika\\PoslovnaLogika\\PoslovnaLogika.csproj|c:\\users\\penguin\\desktop\\seminarski rad\\skupstina\\poslovnalogika\\poslovnalogika\\sednicaposlovnalogikaklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3656D1C5-BFD8-40D4-9C1C-6C3974386BD7}|..\\KorisnickiInterfejs\\KorisnickiInterfejs\\KorisnickiInterfejs.csproj|c:\\users\\penguin\\desktop\\skupstina\\korisnickiinterfejs\\korisnickiinterfejs\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{A497F3E8-E3CB-DD72-48A4-030FC48E6ACF}|..\\MVC\\MVC\\MVC.csproj|c:\\users\\penguin\\desktop\\seminarski rad\\skupstina\\mvc\\mvc\\views\\home\\restdemo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3656D1C5-BFD8-40D4-9C1C-6C3974386BD7}|..\\KorisnickiInterfejs\\KorisnickiInterfejs\\KorisnickiInterfejs.csproj|c:\\users\\penguin\\desktop\\skupstina\\korisnickiinterfejs\\korisnickiinterfejs\\upravljajmandatima.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{27921339-3356-1C62-5A4D-9AA7491B4E79}|..\\RestServis\\RestServis\\RestServis.csproj|c:\\users\\penguin\\desktop\\seminarski rad\\skupstina\\restservis\\restservis\\controllers\\sednicacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3656D1C5-BFD8-40D4-9C1C-6C3974386BD7}|..\\KorisnickiInterfejs\\KorisnickiInterfejs\\KorisnickiInterfejs.csproj|c:\\users\\penguin\\desktop\\skupstina\\korisnickiinterfejs\\korisnickiinterfejs\\poslanikdashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3656D1C5-BFD8-40D4-9C1C-6C3974386BD7}|..\\KorisnickiInterfejs\\KorisnickiInterfejs\\KorisnickiInterfejs.csproj|c:\\users\\penguin\\desktop\\skupstina\\korisnickiinterfejs\\korisnickiinterfejs\\novisaziv.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3656D1C5-BFD8-40D4-9C1C-6C3974386BD7}|..\\KorisnickiInterfejs\\KorisnickiInterfejs\\KorisnickiInterfejs.csproj|c:\\users\\penguin\\desktop\\skupstina\\korisnickiinterfejs\\korisnickiinterfejs\\novasednica.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{608C9905-AD39-4AAC-A050-354C3E6C36CD}|..\\DBUtils\\DBUtils\\DBUtils.csproj|c:\\users\\penguin\\desktop\\skupstina\\dbutils\\dbutils\\tabelaklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1E6C15-41E1-4AF7-AA73-B88A86A7FECF}|..\\PoslovnaLogika\\PoslovnaLogika\\PoslovnaLogika.csproj|c:\\users\\penguin\\desktop\\skupstina\\poslovnalogika\\poslovnalogika\\sednicaposlovnalogikaklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4510E62-2145-449B-8951-0B4D24FE2A45}|..\\KlaseMapiranja\\KlaseMapiranja\\KlaseMapiranja.csproj|c:\\users\\penguin\\desktop\\skupstina\\klasemapiranja\\klasemapiranja\\maperklasa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3656D1C5-BFD8-40D4-9C1C-6C3974386BD7}|..\\KorisnickiInterfejs\\KorisnickiInterfejs\\KorisnickiInterfejs.csproj|c:\\users\\penguin\\desktop\\skupstina\\korisnickiinterfejs\\korisnickiinterfejs\\novozasedanje.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{27921339-3356-1C62-5A4D-9AA7491B4E79}|..\\RestServis\\RestServis\\RestServis.csproj|c:\\users\\penguin\\desktop\\seminarski rad\\skupstina\\restservis\\restservis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,123 +31,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Default.aspx",
-              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\Default.aspx",
-              "RelativeDocumentMoniker": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\Default.aspx",
-              "ToolTip": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\Default.aspx",
-              "RelativeToolTip": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\Default.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-01T19:44:42.35Z",
+              "Title": "SednicaPoslovnaLogikaKlasa.cs",
+              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\PoslovnaLogika\\PoslovnaLogika\\SednicaPoslovnaLogikaKlasa.cs",
+              "RelativeDocumentMoniker": "..\\PoslovnaLogika\\PoslovnaLogika\\SednicaPoslovnaLogikaKlasa.cs",
+              "ToolTip": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\PoslovnaLogika\\PoslovnaLogika\\SednicaPoslovnaLogikaKlasa.cs",
+              "RelativeToolTip": "..\\PoslovnaLogika\\PoslovnaLogika\\SednicaPoslovnaLogikaKlasa.cs",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:13:01.033Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Dashboard.aspx",
-              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\Dashboard.aspx",
-              "RelativeDocumentMoniker": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\Dashboard.aspx",
-              "ToolTip": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\Dashboard.aspx",
-              "RelativeToolTip": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\Dashboard.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-01T19:44:35.173Z"
+              "Title": "RestDemo.cshtml",
+              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\MVC\\MVC\\Views\\Home\\RestDemo.cshtml",
+              "RelativeDocumentMoniker": "..\\MVC\\MVC\\Views\\Home\\RestDemo.cshtml",
+              "ToolTip": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\MVC\\MVC\\Views\\Home\\RestDemo.cshtml",
+              "RelativeToolTip": "..\\MVC\\MVC\\Views\\Home\\RestDemo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T19:12:13.547Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UpravljajMandatima.aspx",
-              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\UpravljajMandatima.aspx",
-              "RelativeDocumentMoniker": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\UpravljajMandatima.aspx",
-              "ToolTip": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\UpravljajMandatima.aspx",
-              "RelativeToolTip": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\UpravljajMandatima.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-01T19:21:56.616Z"
+              "Title": "SednicaController.cs",
+              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\RestServis\\RestServis\\Controllers\\SednicaController.cs",
+              "RelativeDocumentMoniker": "..\\RestServis\\RestServis\\Controllers\\SednicaController.cs",
+              "ToolTip": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\RestServis\\RestServis\\Controllers\\SednicaController.cs",
+              "RelativeToolTip": "..\\RestServis\\RestServis\\Controllers\\SednicaController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:11:32.202Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PoslanikDashboard.aspx",
-              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\PoslanikDashboard.aspx",
-              "RelativeDocumentMoniker": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\PoslanikDashboard.aspx",
-              "ToolTip": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\PoslanikDashboard.aspx",
-              "RelativeToolTip": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\PoslanikDashboard.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-01T19:21:49.404Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NoviSaziv.aspx",
-              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\NoviSaziv.aspx",
-              "RelativeDocumentMoniker": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\NoviSaziv.aspx",
-              "ToolTip": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\NoviSaziv.aspx",
-              "RelativeToolTip": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\NoviSaziv.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-01T19:21:38.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NovaSednica.aspx",
-              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\NovaSednica.aspx",
-              "RelativeDocumentMoniker": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\NovaSednica.aspx",
-              "ToolTip": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\NovaSednica.aspx",
-              "RelativeToolTip": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\NovaSednica.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-01T19:20:43.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TabelaKlasa.cs",
-              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\Skupstina\\DBUtils\\DBUtils\\TabelaKlasa.cs",
-              "RelativeDocumentMoniker": "..\\DBUtils\\DBUtils\\TabelaKlasa.cs",
-              "ToolTip": "C:\\Users\\Penguin\\Desktop\\Skupstina\\DBUtils\\DBUtils\\TabelaKlasa.cs",
-              "RelativeToolTip": "..\\DBUtils\\DBUtils\\TabelaKlasa.cs",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\RestServis\\RestServis\\Program.cs",
+              "RelativeDocumentMoniker": "..\\RestServis\\RestServis\\Program.cs",
+              "ToolTip": "C:\\Users\\Penguin\\Desktop\\SEMINARSKI RAD\\Skupstina\\RestServis\\RestServis\\Program.cs",
+              "RelativeToolTip": "..\\RestServis\\RestServis\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T19:20:38.408Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SednicaPoslovnaLogikaKlasa.cs",
-              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\Skupstina\\PoslovnaLogika\\PoslovnaLogika\\SednicaPoslovnaLogikaKlasa.cs",
-              "RelativeDocumentMoniker": "..\\PoslovnaLogika\\PoslovnaLogika\\SednicaPoslovnaLogikaKlasa.cs",
-              "ToolTip": "C:\\Users\\Penguin\\Desktop\\Skupstina\\PoslovnaLogika\\PoslovnaLogika\\SednicaPoslovnaLogikaKlasa.cs",
-              "RelativeToolTip": "..\\PoslovnaLogika\\PoslovnaLogika\\SednicaPoslovnaLogikaKlasa.cs",
-              "ViewState": "AgIAAIUFAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T19:19:43.436Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MaperKlasa.cs",
-              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KlaseMapiranja\\KlaseMapiranja\\MaperKlasa.cs",
-              "RelativeDocumentMoniker": "..\\KlaseMapiranja\\KlaseMapiranja\\MaperKlasa.cs",
-              "ToolTip": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KlaseMapiranja\\KlaseMapiranja\\MaperKlasa.cs",
-              "RelativeToolTip": "..\\KlaseMapiranja\\KlaseMapiranja\\MaperKlasa.cs",
-              "ViewState": "AgIAAFoBAAAAAAAAAAAAAIIBAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T19:19:27.129Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "NovoZasedanje.aspx",
-              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\NovoZasedanje.aspx",
-              "RelativeDocumentMoniker": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\NovoZasedanje.aspx",
-              "ToolTip": "C:\\Users\\Penguin\\Desktop\\Skupstina\\KorisnickiInterfejs\\KorisnickiInterfejs\\NovoZasedanje.aspx",
-              "RelativeToolTip": "..\\KorisnickiInterfejs\\KorisnickiInterfejs\\NovoZasedanje.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-01T19:09:24.74Z"
+              "WhenOpened": "2025-09-18T19:11:28.406Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -378,11 +378,17 @@ namespace KorisnickiInterfejs
             {
                 gvGlasanja.DataSource = glasanja;
                 gvGlasanja.DataBind();
+                
+                // Sačuvaj podatke u ViewState za export funkcionalnost
+                ViewState["CurrentGlasanjaData"] = glasanja;
             }
             else
             {
                 gvGlasanja.DataSource = null;
                 gvGlasanja.DataBind();
+                
+                // Očisti ViewState
+                ViewState["CurrentGlasanjaData"] = null;
             }
         }
 
@@ -394,6 +400,100 @@ namespace KorisnickiInterfejs
         private void ShowError(string message)
         {
             // Možete implementirati prikaz greške (npr. Label ili JavaScript alert)
+        }
+
+        /// <summary>
+        /// Exportuje trenutno prikazane glasanja u CSV format
+        /// </summary>
+        protected void btnExportuj_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Uzmi podatke direktno iz GridView-a
+                var glasanja = GetCurrentGridViewData();
+                
+                if (glasanja != null && glasanja.Rows.Count > 0)
+                {
+                    // Koristi univerzalnu export funkcionalnost
+                    ExportUtility.ExportToCSV(glasanja, "istorija_glasanja", Response);
+                }
+                else
+                {
+                    ShowError("Nema podataka za export. Molimo prvo pretražite glasanja.");
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowError("Greška pri exportovanju. Molimo pokušajte ponovo.");
+            }
+        }
+
+        /// <summary>
+        /// Generiše stampu trenutno prikazanih glasanja
+        /// </summary>
+        protected void btnStampa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Uzmi podatke direktno iz GridView-a
+                var glasanja = GetCurrentGridViewData();
+                
+                if (glasanja != null && glasanja.Rows.Count > 0)
+                {
+                    // Pripremi aktivne filtere za prikaz
+                    var activeFilters = GetActiveFilters();
+                    
+                    // Koristi univerzalnu stampa funkcionalnost
+                    ExportUtility.ExportToHTML(glasanja, "stampa_glasanja", "Istorija Glasanja", 
+                        "Skupština - Pregled istorije glasanja", activeFilters, Response);
+                }
+                else
+                {
+                    ShowError("Nema podataka za stampu. Molimo prvo pretražite glasanja.");
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowError("Greška pri generisanju stampe. Molimo pokušajte ponovo.");
+            }
+        }
+
+        /// <summary>
+        /// Dohvata trenutno prikazane podatke iz ViewState
+        /// </summary>
+        private DataTable GetCurrentGridViewData()
+        {
+            try
+            {
+                // Uzmi podatke iz ViewState
+                if (ViewState["CurrentGlasanjaData"] != null)
+                {
+                    return ViewState["CurrentGlasanjaData"] as DataTable;
+                }
+                
+                return new DataTable();
+            }
+            catch (Exception)
+            {
+                return new DataTable();
+            }
+        }
+
+        /// <summary>
+        /// Dohvata listu aktivnih filtera za prikaz u stampi
+        /// </summary>
+        private List<string> GetActiveFilters()
+        {
+            var activeFilters = new List<string>();
+            
+            if (ddlSednica.SelectedIndex > 0)
+                activeFilters.Add($"Sednica: {ddlSednica.SelectedItem.Text}");
+            if (ddlPitanje.SelectedIndex > 0)
+                activeFilters.Add($"Pitanje: {ddlPitanje.SelectedItem.Text}");
+            if (ddlRezultat.SelectedIndex > 0)
+                activeFilters.Add($"Rezultat: {ddlRezultat.SelectedItem.Text}");
+            
+            return activeFilters;
         }
     }
 }

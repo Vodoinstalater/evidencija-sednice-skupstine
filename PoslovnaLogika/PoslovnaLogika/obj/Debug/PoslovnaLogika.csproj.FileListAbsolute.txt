@@ -1,39 +1,4 @@
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.csprojResolveAssemblyReference.cache
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.dll.config
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\KlaseMapiranja.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\KlasePodataka.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\KlaseMapiranja.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\KlasePodataka.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.csproj.AssemblyReference.cache
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.csproj.CoreCompileInputs.cache
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.dll.config
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\KlaseMapiranja.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\KlasePodataka.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\DBUtils.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\KlaseMapiranja.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\KlasePodataka.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\bin\Debug\DBUtils.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\2_SlojPoslovneLogike\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.csproj.CopyComplete
-C:\Users\Penguin\Desktop\Sednica\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.csproj.AssemblyReference.cache
-C:\Users\Penguin\Desktop\Sednica\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.csproj.CoreCompileInputs.cache
-C:\Users\Penguin\Desktop\Sednica\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.dll
-C:\Users\Penguin\Desktop\Sednica\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.pdb
-C:\Users\Penguin\Desktop\Sednica\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.dll.config
-C:\Users\Penguin\Desktop\Sednica\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.dll
-C:\Users\Penguin\Desktop\Sednica\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.pdb
-C:\Users\Penguin\Desktop\Sednica\PoslovnaLogika\PoslovnaLogika\bin\Debug\DBUtils.dll
-C:\Users\Penguin\Desktop\Sednica\PoslovnaLogika\PoslovnaLogika\bin\Debug\KlasePodataka.dll
-C:\Users\Penguin\Desktop\Sednica\PoslovnaLogika\PoslovnaLogika\bin\Debug\DBUtils.pdb
-C:\Users\Penguin\Desktop\Sednica\PoslovnaLogika\PoslovnaLogika\bin\Debug\KlasePodataka.pdb
-C:\Users\Penguin\Desktop\Sednica\PoslovnaLogika\PoslovnaLogika\obj\Debug\Poslovna.5AADE7AF.Up2Date
+C:\Users\Penguin\Desktop\Skupstina\PoslovnaLogika\PoslovnaLogika\bin\Debug\BusinessRulesConfig.xml
 C:\Users\Penguin\Desktop\Skupstina\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.dll
 C:\Users\Penguin\Desktop\Skupstina\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.pdb
 C:\Users\Penguin\Desktop\Skupstina\PoslovnaLogika\PoslovnaLogika\bin\Debug\DBUtils.dll
@@ -45,3 +10,15 @@ C:\Users\Penguin\Desktop\Skupstina\PoslovnaLogika\PoslovnaLogika\obj\Debug\Poslo
 C:\Users\Penguin\Desktop\Skupstina\PoslovnaLogika\PoslovnaLogika\obj\Debug\Poslovna.5AADE7AF.Up2Date
 C:\Users\Penguin\Desktop\Skupstina\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.dll
 C:\Users\Penguin\Desktop\Skupstina\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PoslovnaLogika\PoslovnaLogika\bin\Debug\BusinessRulesConfig.xml
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PoslovnaLogika\PoslovnaLogika\bin\Debug\PoslovnaLogika.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PoslovnaLogika\PoslovnaLogika\bin\Debug\DBUtils.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PoslovnaLogika\PoslovnaLogika\bin\Debug\KlasePodataka.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PoslovnaLogika\PoslovnaLogika\bin\Debug\DBUtils.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PoslovnaLogika\PoslovnaLogika\bin\Debug\KlasePodataka.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.csproj.AssemblyReference.cache
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.csproj.CoreCompileInputs.cache
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PoslovnaLogika\PoslovnaLogika\obj\Debug\Poslovna.5AADE7AF.Up2Date
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PoslovnaLogika\PoslovnaLogika\obj\Debug\PoslovnaLogika.pdb

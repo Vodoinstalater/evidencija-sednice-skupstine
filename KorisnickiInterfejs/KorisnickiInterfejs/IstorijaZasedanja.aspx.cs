@@ -51,9 +51,6 @@ namespace KorisnickiInterfejs
                 
                 // Učitaj početne podatke
                 LoadZasedanja();
-                
-                // Učitaj statistike
-                LoadStatistics();
             }
             catch (Exception ex)
             {
@@ -102,27 +99,6 @@ namespace KorisnickiInterfejs
             }
         }
 
-        private void LoadStatistics()
-        {
-            try
-            {
-                EnsureSednicePregledInitialized();
-                var stats = _sednicePregled.DajStatistikeZasedanja();
-                
-                lblUkupnoZasedanja.Text = stats.UkupnoZasedanja.ToString();
-                lblAktivnaZasedanja.Text = stats.AktivnaZasedanja.ToString();
-                lblZavrsenaZasedanja.Text = stats.ZavrsenaZasedanja.ToString();
-                lblUkupnoSednica.Text = stats.UkupnoSednica.ToString();
-            }
-            catch (Exception ex)
-            {
-                // Postavi default vrednosti
-                lblUkupnoZasedanja.Text = "0";
-                lblAktivnaZasedanja.Text = "0";
-                lblZavrsenaZasedanja.Text = "0";
-                lblUkupnoSednica.Text = "0";
-            }
-        }
 
         protected void btnPretrazi_Click(object sender, EventArgs e)
         {

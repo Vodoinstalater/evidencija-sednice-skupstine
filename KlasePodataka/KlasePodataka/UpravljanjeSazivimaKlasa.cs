@@ -50,13 +50,27 @@ namespace KlasePodataka
                 // Kreiraj novi saziv
                 bool rezultat = _sazivDB.DodajNoviSaziv(noviSaziv);
                 
-                if (rezultat && stariAktivanSazivId > 0)
+                if (rezultat)
                 {
                     // Dohvati ID novog saziva
                     int noviSazivId = _sazivDB.DajNajnovijiSazivId();
                     
-                    // Kopiraj mandate iz starog aktivnog saziva u novi saziv
-                    bool mandateKopirani = KopirajMandateIzSaziva(stariAktivanSazivId, noviSazivId);
+                    if (stariAktivanSazivId > 0)
+                    {
+                        // Kopiraj mandate iz starog aktivnog saziva u novi saziv
+                        bool mandateKopirani = KopirajMandateIzSaziva(stariAktivanSazivId, noviSazivId);
+                        
+                        // Ako nema mandata kopiranih, kreiraj Predsednik mandate iz postojećih lica
+                        if (!mandateKopirani)
+                        {
+                            KreirajPredsednikMandateIzLica(noviSazivId);
+                        }
+                    }
+                    else
+                    {
+                        // Ovo je prvi saziv - kreiraj Predsednik mandate iz postojećih lica
+                        KreirajPredsednikMandateIzLica(noviSazivId);
+                    }
                 }
                 
                 return rezultat;
@@ -95,13 +109,9 @@ namespace KlasePodataka
         {
             try
             {
-                DateTime danas = DateTime.Today;
-                // Izmenjen upit da prioritizuje saziv sa najnovijim pocetkom
-                // Ovo rešava problem kada stari saziv ima kraj = danas, a novi saziv ima pocetak = danas
-                string upit = @"SELECT TOP 1 * FROM saziv 
-                               WHERE pocetak <= '" + danas.ToString("yyyy-MM-dd") + 
-                             "' AND kraj >= '" + danas.ToString("yyyy-MM-dd") + 
-                             "' ORDER BY pocetak DESC";
+                // Pojednostavljena logika - uvek vraća najnoviji saziv (po ID-u)
+                // Ovo je mnogo jednostavnije i predvidljivije od složene date logike
+                string upit = @"SELECT TOP 1 * FROM saziv ORDER BY id_saziva DESC";
                 
                 DataSet rezultat = _sazivDB.DajPodatke(upit);
                 
@@ -136,7 +146,7 @@ namespace KlasePodataka
                 {
                     SazivKlasa saziv = new SazivKlasa();
                     saziv.Id_saziva = Convert.ToInt32(red["id_saziva"]);
-                    saziv.Ime = red["ime"].ToString();
+                    saziv.Ime = red["naziv_saziva"].ToString();
                     saziv.Pocetak = Convert.ToDateTime(red["pocetak"]);
                     saziv.Kraj = Convert.ToDateTime(red["kraj"]);
                     saziv.Opis = red["opis"].ToString();
@@ -205,6 +215,91 @@ namespace KlasePodataka
             }
             catch (Exception)
             {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Kreira Predsednik mandate za novi saziv iz postojećih lica sa pozicijom Predsednik
+        /// </summary>
+        /// <param name="sazivId">ID saziva za koji se kreiraju mandate</param>
+        /// <returns>True ako je bar jedan mandat uspešno kreiran</returns>
+        private bool KreirajPredsednikMandateIzLica(int sazivId)
+        {
+            try
+            {
+                // Dohvati sva lica sa pozicijom Predsednik (pozicija = 2)
+                string upit = "SELECT id_lica, stranka FROM lica WHERE pozicija = 2";
+                DataSet rezultat = _sazivDB.DajPodatke(upit);
+                
+                if (rezultat?.Tables?.Count == 0 || rezultat.Tables[0].Rows.Count == 0)
+                {
+                    return false; // Nema Predsednika u sistemu
+                }
+                
+                int uspesnoKreirano = 0;
+                MandatDBKlasa mandatDB = new MandatDBKlasa(_konekcija, "mandat");
+                
+                foreach (DataRow red in rezultat.Tables[0].Rows)
+                {
+                    int idLica = Convert.ToInt32(red["id_lica"]);
+                    int idStranke = Convert.ToInt32(red["stranka"]);
+                    
+                    // Kreiraj mandat za Predsednika
+                    MandatKlasa noviMandat = new MandatKlasa
+                    {
+                        Id_lica = idLica,
+                        Id_saziva = sazivId,
+                        Id_stranke = idStranke
+                    };
+                    
+                    bool mandatKreiran = mandatDB.DodajNoviMandat(noviMandat);
+                    if (mandatKreiran)
+                    {
+                        uspesnoKreirano++;
+                    }
+                }
+                
+                return uspesnoKreirano > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Kreira novi saziv sa validacijom
+        /// </summary>
+        public bool KreirajNoviSazivSaValidacijom(string naziv, DateTime pocetak, DateTime zavrsetak, string opis, out string poruka)
+        {
+            poruka = "";
+            try
+            {
+                // Kreiraj saziv objekat
+                SazivKlasa noviSaziv = new SazivKlasa
+                {
+                    Ime = naziv,
+                    Pocetak = pocetak,
+                    Kraj = zavrsetak,
+                    Opis = opis
+                };
+
+                // Koristi postojeću metodu
+                bool uspesno = KreirajNoviSaziv(noviSaziv);
+                if (uspesno)
+                {
+                    poruka = "Saziv je uspešno kreiran.";
+                }
+                else
+                {
+                    poruka = "Greška pri kreiranju saziva.";
+                }
+                return uspesno;
+            }
+            catch (Exception ex)
+            {
+                poruka = $"Greška pri kreiranju saziva: {ex.Message}";
                 return false;
             }
         }

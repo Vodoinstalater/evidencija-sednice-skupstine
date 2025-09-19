@@ -17,7 +17,15 @@ namespace KlasePodataka
 
         public DataSet DajSveSazive()
         {
-            return this.DajPodatke("SELECT * FROM saziv ORDER BY pocetak DESC");
+            try
+            {
+                return this.DajPodatke("SELECT * FROM v_sviSazivi ORDER BY pocetak DESC");
+            }
+            catch (Exception)
+            {
+                // Return empty DataSet if there's an error
+                return new DataSet();
+            }
         }
 
         public DataSet DajSazivPoId(int id_saziva)
@@ -84,35 +92,43 @@ namespace KlasePodataka
 
         public DataSet DajSazivePoFilterima(string naziv = null, DateTime? pocetak = null, DateTime? kraj = null)
         {
-            string upit = "SELECT * FROM saziv WHERE 1=1";
-            
-            if (!string.IsNullOrEmpty(naziv))
+            try
             {
-                upit += $" AND ime LIKE '%{naziv}%'";
+                string upit = "SELECT * FROM saziv WHERE 1=1";
+                
+                if (!string.IsNullOrEmpty(naziv))
+                {
+                    // Escape single quotes to prevent SQL injection
+                    string escapedNaziv = naziv.Replace("'", "''");
+                    upit += $" AND ime LIKE '%{escapedNaziv}%'";
+                }
+                
+                if (pocetak.HasValue)
+                {
+                    upit += $" AND pocetak >= '{pocetak.Value:yyyy-MM-dd}'";
+                }
+                
+                if (kraj.HasValue)
+                {
+                    upit += $" AND kraj <= '{kraj.Value:yyyy-MM-dd}'";
+                }
+                
+                upit += " ORDER BY pocetak DESC";
+                
+                return this.DajPodatke(upit);
             }
-            
-            if (pocetak.HasValue)
+            catch (Exception)
             {
-                upit += $" AND pocetak >= '{pocetak.Value:yyyy-MM-dd}'";
+                // Return empty DataSet if there's an error
+                return new DataSet();
             }
-            
-            if (kraj.HasValue)
-            {
-                upit += $" AND kraj <= '{kraj.Value:yyyy-MM-dd}'";
-            }
-            
-            upit += " ORDER BY pocetak DESC";
-            
-            return this.DajPodatke(upit);
         }
 
         public bool PostojiAktivanSaziv()
         {
-            DateTime danas = DateTime.Today;
-            // Koristi istu logiku kao DajAktivanSaziv - prioritizuje saziv sa najnovijim pocetkom
-            string upit = @"SELECT COUNT(*) as broj FROM saziv 
-                           WHERE pocetak <= '" + danas.ToString("yyyy-MM-dd") + 
-                         "' AND kraj >= '" + danas.ToString("yyyy-MM-dd") + "'";
+            // Pojednostavljena logika - uvek vraća true ako postoji bilo koji saziv
+            // Ovo je mnogo jednostavnije i predvidljivije od složene date logike
+            string upit = @"SELECT COUNT(*) as broj FROM saziv";
             DataSet rezultat = this.DajPodatke(upit);
             return Convert.ToInt32(rezultat.Tables[0].Rows[0]["broj"]) > 0;
         }

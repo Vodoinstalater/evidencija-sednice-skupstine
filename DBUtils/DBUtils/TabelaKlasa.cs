@@ -133,7 +133,7 @@ namespace DBUtils
                 
                 return rezultat;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw; // Re-throw the exception for proper error handling
             }

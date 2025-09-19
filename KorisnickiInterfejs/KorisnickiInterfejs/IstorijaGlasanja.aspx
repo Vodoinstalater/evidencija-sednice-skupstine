@@ -72,6 +72,24 @@
             background: #545b62;
         }
         
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #218838;
+        }
+        
+        .btn-info {
+            background: #17a2b8;
+            color: white;
+        }
+        
+        .btn-info:hover {
+            background: #138496;
+        }
+        
         .results-section {
             background: white;
             border-radius: 8px;
@@ -267,6 +285,8 @@
             <div class="search-buttons">
                 <asp:Button ID="btnPretrazi" runat="server" Text="🔍 Pretraži" CssClass="btn btn-primary" OnClick="btnPretrazi_Click" />
                 <asp:Button ID="btnResetuj" runat="server" Text="🔄 Resetuj" CssClass="btn btn-secondary" OnClick="btnResetuj_Click" />
+                <asp:Button ID="btnExportuj" runat="server" Text="📊 Excel" CssClass="btn btn-success" OnClick="btnExportuj_Click" />
+                <asp:Button ID="btnStampa" runat="server" Text="🖨️ Stampa" CssClass="btn btn-info" OnClick="btnStampa_Click" />
             </div>
         </div>
     </div>

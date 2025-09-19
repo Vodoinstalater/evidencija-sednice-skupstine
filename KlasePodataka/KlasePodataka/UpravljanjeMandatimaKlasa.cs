@@ -34,10 +34,12 @@ namespace KlasePodataka
                 }
 
                 // Dodaj novo lice
-                return _licaDB.DodajNovaLica(novaLica);
+                return _licaDB.DodajNovoLice(novaLica);
             }
-            catch
+            catch (Exception ex)
             {
+                // Log the actual error for debugging
+                System.Diagnostics.Debug.WriteLine($"Error in DodajNovoLica: {ex.Message}");
                 return false;
             }
         }
@@ -64,10 +66,16 @@ namespace KlasePodataka
                 noviMandat.Id_saziva = id_saziva;
                 noviMandat.Id_stranke = id_stranke;
 
-                return _mandatDB.DodajNoviMandat(noviMandat);
+                bool result = _mandatDB.DodajNoviMandat(noviMandat);
+                if (!result)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Failed to add mandat: liceId={id_lica}, sazivId={id_saziva}, strankaId={id_stranke}");
+                }
+                return result;
             }
-            catch
+            catch (Exception ex)
             {
+                System.Diagnostics.Debug.WriteLine($"Exception in DodajMandat: {ex.Message}");
                 return false;
             }
         }
@@ -160,6 +168,18 @@ namespace KlasePodataka
             return listaMandata;
         }
 
+        public List<MandatKlasa> DajMandatePoSazivuLista(int id_saziva)
+        {
+            try
+            {
+                return _mandatDB.DajMandatePoSazivuLista(id_saziva);
+            }
+            catch
+            {
+                return new List<MandatKlasa>();
+            }
+        }
+
         public DataSet DajMandateSaDetaljima(int id_saziva)
         {
             try
@@ -179,6 +199,116 @@ namespace KlasePodataka
             catch
             {
                 return new DataSet();
+            }
+        }
+
+        /// <summary>
+        /// Kreira samo novo lice (bez mandata)
+        /// </summary>
+        public bool KreirajNovoLice(string ime, string prezime, string korisnickoIme, string lozinka, 
+            int pozicijaId, int strankaId, char pol, DateTime datumRodjenja, string bio, out string poruka)
+        {
+            poruka = "";
+            try
+            {
+                // Kreiraj novo lice
+                LicaKlasa novoLice = new LicaKlasa
+                {
+                    Ime = ime,
+                    Prezime = prezime,
+                    Korisnicko_ime = korisnickoIme,
+                    Lozinka = lozinka,
+                    Pozicija = pozicijaId,
+                    Stranka = strankaId,
+                    Pol = pol,
+                    Datumr = datumRodjenja,
+                    Bio = bio
+                };
+
+                // Dodaj lice
+                if (!DodajNovoLica(novoLice))
+                {
+                    // Proveri da li je problem sa korisničkim imenom
+                    if (_licaDB.PostojiLicaSaKorisnickimImenom(korisnickoIme))
+                    {
+                        poruka = "Korisničko ime već postoji. Molimo izaberite drugo korisničko ime.";
+                    }
+                    else
+                    {
+                        poruka = "Greška pri kreiranju novog lica. Proverite da li su svi podaci validni.";
+                    }
+                    return false;
+                }
+
+                poruka = "Lice je uspešno kreirano. Sada možete dodati mandat ručno.";
+                return true;
+            }
+            catch (Exception ex)
+            {
+                poruka = $"Greška pri kreiranju lica: {ex.Message}";
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Kreira novo lice i mandat zajedno (za kompatibilnost)
+        /// </summary>
+        public bool KreirajNovoLiceIMandat(string ime, string prezime, string korisnickoIme, string lozinka, 
+            int pozicijaId, int strankaId, char pol, DateTime datumRodjenja, string bio, out string poruka)
+        {
+            poruka = "";
+            try
+            {
+                // Prvo kreiraj lice
+                if (!KreirajNovoLice(ime, prezime, korisnickoIme, lozinka, pozicijaId, strankaId, pol, datumRodjenja, bio, out string licePoruka))
+                {
+                    poruka = licePoruka;
+                    return false;
+                }
+
+                // Dohvati ID novog lica
+                int liceId = _licaDB.DajNajnovijeLicaId();
+                if (liceId == 0)
+                {
+                    poruka = "Greška pri dohvatanju ID-ja novog lica.";
+                    return false;
+                }
+
+                // Dohvati aktivan saziv
+                UpravljanjeSazivimaKlasa upravljanjeSazivima = new UpravljanjeSazivimaKlasa(_konekcija);
+                SazivKlasa aktivanSaziv = upravljanjeSazivima.DajAktivanSaziv();
+                if (aktivanSaziv == null)
+                {
+                    poruka = "Ne postoji aktivan saziv. Prvo kreirajte novi saziv.";
+                    return false;
+                }
+
+                // Kreiraj mandat
+                if (!DodajMandat(liceId, aktivanSaziv.Id_saziva, strankaId))
+                {
+                    // Proveri da li mandat već postoji
+                    if (_mandatDB.PostojiMandat(liceId, aktivanSaziv.Id_saziva))
+                    {
+                        poruka = "Mandat za ovo lice već postoji u ovom sazivu.";
+                    }
+                    else if (_mandatDB.PostojiMandatPoStranci(liceId, aktivanSaziv.Id_saziva, strankaId))
+                    {
+                        poruka = "Mandat za ovo lice sa istom strankom već postoji u ovom sazivu.";
+                    }
+                    else
+                    {
+                        poruka = "Greška pri kreiranju mandata. Proverite da li su svi podaci validni.";
+                    }
+                    return false;
+                }
+
+                poruka = "Lice i mandat su uspešno kreirani.";
+                return true;
+            }
+            catch (Exception ex)
+            {
+                poruka = $"Greška pri kreiranju lica i mandata: {ex.Message}";
+                return false;
             }
         }
     }

@@ -1,75 +1,3 @@
-C:\Users\student\Documents\Visual Studio 2010\Projects\Se2 cas 10 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\Se2 cas 10 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\Se2 cas 10 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\Se2 cas 10 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\Se2 cas 10 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.csprojResolveAssemblyReference.cache
-C:\Users\student\Documents\Visual Studio 2010\Projects\Se2 cas 10 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\Se2 cas 10 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.csprojResolveAssemblyReference.cache
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.dll
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.pdb
-C:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 11 grupa 2\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.pdb
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.dll
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.pdb
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.dll
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.dll
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.dll
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.pdb
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.pdb
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.pdb
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.csprojResolveAssemblyReference.cache
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.dll
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 12 grupa 1\DALJE\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.pdb
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.dll
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.pdb
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.dll
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.dll
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.dll
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.pdb
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.pdb
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.pdb
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.csprojResolveAssemblyReference.cache
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.dll
-c:\Users\student\Documents\Visual Studio 2010\Projects\SE2 cas 13\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.csproj.AssemblyReference.cache
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.csproj.CoreCompileInputs.cache
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\DBUtils.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.dll
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\DBUtils.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.dll.config
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.pdb
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.csproj.CopyComplete
-D:\Ljubica\NASTAVA\ddd LETNJI SEMESTAR osnovne VEB PROGRAMIRANJE\sk 2024 25\seminarski rad\VP2025sem\4_PrezentacioniSloj\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.dll
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.csproj.AssemblyReference.cache
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.csproj.CoreCompileInputs.cache
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.dll
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.pdb
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.dll
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.pdb
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\DBUtils.dll
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.dll
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.dll
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.dll
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\DBUtils.pdb
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.pdb
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.pdb
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.pdb
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.dll.config
-C:\Users\Penguin\Desktop\Sednica\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\Prezenta.34EB9E51.Up2Date
 C:\Users\Penguin\Desktop\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.dll
 C:\Users\Penguin\Desktop\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.pdb
 C:\Users\Penguin\Desktop\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.dll
@@ -85,3 +13,18 @@ C:\Users\Penguin\Desktop\Skupstina\PrezentacionaLogika\PrezentacionaLogika\obj\D
 C:\Users\Penguin\Desktop\Skupstina\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\Prezenta.34EB9E51.Up2Date
 C:\Users\Penguin\Desktop\Skupstina\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.dll
 C:\Users\Penguin\Desktop\Skupstina\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PrezentacionaLogika.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\DBUtils.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\PoslovnaLogika.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlaseMapiranja.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\DBUtils.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\bin\Debug\KlasePodataka.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.csproj.AssemblyReference.cache
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.csproj.CoreCompileInputs.cache
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\Prezenta.34EB9E51.Up2Date
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\PrezentacionaLogika\PrezentacionaLogika\obj\Debug\PrezentacionaLogika.pdb

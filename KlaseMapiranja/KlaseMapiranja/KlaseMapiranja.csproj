@@ -34,6 +34,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DBUtils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DBUtils\DBUtils\bin\Debug\DBUtils.dll</HintPath>
+    </Reference>
     <Reference Include="KlasePodataka, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\KlasePodataka\KlasePodataka\bin\Debug\KlasePodataka.dll</HintPath>

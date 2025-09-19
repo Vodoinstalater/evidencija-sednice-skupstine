@@ -29,6 +29,7 @@ namespace KorisnickiInterfejs
             if (!IsPostBack)
             {
                 InitializePage();
+                CheckDatabaseInitialization();
             }
         }
 
@@ -36,6 +37,7 @@ namespace KorisnickiInterfejs
         {
             try
             {
+                EnsureSednicePregledInitialized();
                 LoadCurrentSazivInfo();
                 LoadDropdownData();
                 LoadGridData();
@@ -43,6 +45,63 @@ namespace KorisnickiInterfejs
             catch (Exception ex)
             {
                 ShowAlert($"Greška pri inicijalizaciji stranice: {ex.Message}", "danger");
+            }
+        }
+
+        private void EnsureSednicePregledInitialized()
+        {
+            try
+            {
+                // The property will automatically initialize the object if it's null
+                var temp = SednicePregled;
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Greška pri inicijalizaciji SednicePregledKlasa", ex);
+            }
+        }
+
+        private void CheckDatabaseInitialization()
+        {
+            try
+            {
+                // Test database connection first
+                bool connectionOk = TestDatabaseConnection();
+                if (!connectionOk)
+                {
+                    ShowAlert("❌ GREŠKA KONEKCIJE SA BAZOM PODATAKA!<br/>" +
+                             "Proverite da li je SQL Server pokrenut i da li je baza 'sednica3' dostupna.", "danger");
+                    return;
+                }
+
+                // Use proper layer architecture - delegate to Layer 3B
+                bool sistemSpreman = SednicePregled.DaLiJeSistemSpremanZaRad(out string poruka);
+                
+                if (sistemSpreman)
+                {
+                    ShowAlert($"✅ {poruka}", "success");
+                }
+                else
+                {
+                    ShowAlert($"⚠️ {poruka}", "warning");
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowAlert($"Greška pri proveri inicijalizacije: {ex.Message}", "danger");
+            }
+        }
+
+        private bool TestDatabaseConnection()
+        {
+            try
+            {
+                DBUtils.KonekcijaKlasa konekcija = new DBUtils.KonekcijaKlasa();
+                return konekcija.OtvoriKonekciju();
+            }
+            catch (Exception ex)
+            {
+                return false;
             }
         }
 
@@ -114,12 +173,17 @@ namespace KorisnickiInterfejs
                 ddlStranka.Items.Add(new ListItem("-- Izaberite stranku --", ""));
 
                 var stranke = SednicePregled.DajSveStranke();
-                foreach (var stranka in stranke)
+                if (stranke != null && stranke.Count > 0)
                 {
-                    ddlStranka.Items.Add(new ListItem(stranka.Naziv, stranka.Id.ToString()));
+                    foreach (var stranka in stranke)
+                    {
+                        ddlStranka.Items.Add(new ListItem(stranka.Naziv, stranka.Id.ToString()));
+                    }
                 }
-                
-                // Stranke učitane uspešno
+                else
+                {
+                    ShowAlert("Nema stranaka u sistemu. Dodajte stranke pre dodavanja lica.", "warning");
+                }
             }
             catch (Exception ex)
             {
@@ -135,12 +199,17 @@ namespace KorisnickiInterfejs
                 ddlPozicija.Items.Add(new ListItem("-- Izaberite poziciju --", ""));
 
                 var pozicije = SednicePregled.DajSvePozicije();
-                foreach (var pozicija in pozicije)
+                if (pozicije != null && pozicije.Count > 0)
                 {
-                    ddlPozicija.Items.Add(new ListItem(pozicija.Naziv, pozicija.Id.ToString()));
+                    foreach (var pozicija in pozicije)
+                    {
+                        ddlPozicija.Items.Add(new ListItem(pozicija.Naziv, pozicija.Id.ToString()));
+                    }
                 }
-                
-                // Pozicije učitane uspešno
+                else
+                {
+                    ShowAlert("Nema pozicija u sistemu. Proverite konfiguraciju.", "warning");
+                }
             }
             catch (Exception ex)
             {
@@ -152,24 +221,23 @@ namespace KorisnickiInterfejs
         {
             try
             {
-    
-                // Za sada dodajemo neke test lica
                 ddlLica.Items.Clear();
                 ddlLica.Items.Add(new ListItem("-- Izaberite lice --", ""));
                 
                 // Učitaj sva lica iz baze
                 var svaLica = SednicePregled.DajSvaLica();
-                foreach (var lice in svaLica)
+                if (svaLica != null && svaLica.Count > 0)
                 {
-                    string displayText = $"{lice.Ime} {lice.Prezime} ({lice.KorisnickoIme})";
-                    ddlLica.Items.Add(new ListItem(displayText, lice.Id.ToString()));
+                    foreach (var lice in svaLica)
+                    {
+                        string displayText = $"{lice.Ime} {lice.Prezime} ({lice.KorisnickoIme})";
+                        ddlLica.Items.Add(new ListItem(displayText, lice.Id.ToString()));
+                    }
                 }
-                
-                // Lica učitana uspešno
             }
             catch (Exception ex)
             {
-                // Log greške pri učitavanju lica
+                ShowAlert($"Greška pri učitavanju lica u dropdown: {ex.Message}", "danger");
             }
         }
 
@@ -197,11 +265,14 @@ namespace KorisnickiInterfejs
                 gvSvaLica.DataSource = svaLica;
                 gvSvaLica.DataBind();
                 
-                // Grid sa lica učitan uspešno
+                if (svaLica == null || svaLica.Count == 0)
+                {
+                    ShowAlert("Nema lica u sistemu.", "info");
+                }
             }
             catch (Exception ex)
             {
-                // Log greške pri učitavanju grid-a sa lica
+                ShowAlert($"Greška pri učitavanju lica: {ex.Message}", "danger");
             }
         }
 
@@ -213,11 +284,14 @@ namespace KorisnickiInterfejs
                 gvMandati.DataSource = mandati;
                 gvMandati.DataBind();
                 
-                // Grid sa mandatima učitan uspešno
+                if (mandati == null || mandati.Count == 0)
+                {
+                    ShowAlert("Nema mandata za aktivan saziv.", "info");
+                }
             }
             catch (Exception ex)
             {
-                // Log greške pri učitavanju grid-a sa mandatima
+                ShowAlert($"Greška pri učitavanju mandata: {ex.Message}", "danger");
             }
         }
 
@@ -225,7 +299,6 @@ namespace KorisnickiInterfejs
         {
             try
             {
-                
                 // Validacija
                 if (string.IsNullOrWhiteSpace(txtIme.Text.Trim()))
                 {
@@ -281,6 +354,14 @@ namespace KorisnickiInterfejs
                     return;
                 }
 
+                // Proveri da li postoji aktivan saziv
+                var aktivanSaziv = SednicePregled.DajAktivanSaziv();
+                if (aktivanSaziv == null)
+                {
+                    ShowAlert("Ne postoji aktivan saziv! Prvo kreirajte novi saziv pre dodavanja lica.", "danger");
+                    return;
+                }
+
                 // Kreiraj novo lice
                 string ime = txtIme.Text.Trim();
                 string prezime = txtPrezime.Text.Trim();
@@ -305,7 +386,7 @@ namespace KorisnickiInterfejs
                 }
                 else
                 {
-                    ShowAlert(poruka, "danger");
+                    ShowAlert($"Greška: {poruka}", "danger");
                 }
             }
             catch (Exception ex)

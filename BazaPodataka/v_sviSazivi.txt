@@ -1,0 +1,10 @@
+CREATE VIEW v_sviSazivi
+AS
+SELECT
+    sa.id_saziva,
+    sa.ime AS naziv_saziva,
+    sa.pocetak,
+    sa.kraj,
+    sa.opis
+FROM dbo.saziv sa;
+GO

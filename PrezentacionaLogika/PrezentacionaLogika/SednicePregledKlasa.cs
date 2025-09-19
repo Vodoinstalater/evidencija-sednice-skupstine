@@ -369,9 +369,13 @@ namespace PrezentacionaLogika
         {
             try
             {
-                var sazivi = DajSveSazive();
-                // Vraćamo prvi saziv kao aktivan
-                return sazivi.FirstOrDefault();
+                // Koristi servis layer koji poziva pravu business logiku
+                var rezultat = _servis.DajAktivanSaziv();
+                if (rezultat.Uspesno && rezultat.Podaci != null)
+                {
+                    return rezultat.Podaci;
+                }
+                return null;
             }
             catch (Exception)
             {
@@ -474,11 +478,22 @@ namespace PrezentacionaLogika
             {
                 var sazivi = DajSveSazive();
                 
+                if (sazivi == null || sazivi.Count == 0)
+                {
+                    return new
+                    {
+                        UkupnoSaziva = 0,
+                        AktivnihSaziva = 0,
+                        ZavrsenihSaziva = 0,
+                        UkupnoMandata = 0
+                    };
+                }
+                
                 return new
                 {
                     UkupnoSaziva = sazivi.Count,
-                    AktivnihSaziva = sazivi.Count(s => s.Aktivan),
-                    ZavrsenihSaziva = sazivi.Count(s => !s.Aktivan),
+                    AktivnihSaziva = sazivi.Count(s => s != null && s.Aktivan),
+                    ZavrsenihSaziva = sazivi.Count(s => s != null && !s.Aktivan),
                     UkupnoMandata = 0
                 };
             }
@@ -583,6 +598,39 @@ namespace PrezentacionaLogika
             }
         }
 
+        /// <summary>
+        /// Dohvata statistike mandata za aktivan saziv za prikaz u UI
+        /// </summary>
+        /// <returns>Statistike mandata za aktivan saziv</returns>
+        public dynamic DajStatistikeMandataZaAktivanSaziv()
+        {
+            try
+            {
+                var rezultat = _servis.DajStatistikeMandataZaAktivanSaziv();
+                if (rezultat.Uspesno && rezultat.Podaci != null)
+                {
+                    return rezultat.Podaci;
+                }
+                return new
+                {
+                    UkupnoMandata = 0,
+                    AktivnihMandata = 0,
+                    Poslanika = 0,
+                    Stranaka = 0
+                };
+            }
+            catch (Exception)
+            {
+                return new
+                {
+                    UkupnoMandata = 0,
+                    AktivnihMandata = 0,
+                    Poslanika = 0,
+                    Stranaka = 0
+                };
+            }
+        }
+
         // ========================================================================
         // METODE ZA LICA
         // ========================================================================
@@ -605,7 +653,7 @@ namespace PrezentacionaLogika
             }
         }
 
-        // metoda za kreiranje novog lica
+        // metoda za kreiranje novog lica (bez mandata)
         public bool KreirajNovoLice(string ime, string prezime, string korisnickoIme, string lozinka, 
                                    int pozicijaId, int strankaId, char pol, DateTime datumRodjenja, 
                                    string biografija, out string poruka)
@@ -627,6 +675,54 @@ namespace PrezentacionaLogika
             catch (Exception ex)
             {
                 poruka = $"Greška pri kreiranju lica: {ex.Message}";
+                return false;
+            }
+        }
+
+        // metoda za kreiranje novog lica i mandata zajedno
+        public bool KreirajNovoLiceIMandat(string ime, string prezime, string korisnickoIme, string lozinka, 
+                                          int pozicijaId, int strankaId, char pol, DateTime datumRodjenja, 
+                                          string biografija, out string poruka)
+        {
+            try
+            {
+                var rezultat = _servis.KreirajNovoLiceIMandat(ime, prezime, korisnickoIme, lozinka, pozicijaId, strankaId, pol, datumRodjenja, biografija);
+                if (rezultat.Uspesno)
+                {
+                    poruka = rezultat.Poruka ?? "Lice i mandat uspešno kreirani.";
+                    return true;
+                }
+                else
+                {
+                    poruka = rezultat.Poruka ?? "Greška pri kreiranju lica i mandata.";
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                poruka = $"Greška pri kreiranju lica i mandata: {ex.Message}";
+                return false;
+            }
+        }
+
+        // ========================================================================
+        // METODE ZA VALIDACIJU SISTEMA
+        // ========================================================================
+
+        /// <summary>
+        /// Validira da li je sistem spreman za rad
+        /// </summary>
+        public bool DaLiJeSistemSpremanZaRad(out string poruka)
+        {
+            try
+            {
+                var rezultat = _servis.DaLiJeSistemSpremanZaRad();
+                poruka = rezultat.Poruka ?? "Sistem je spreman za rad.";
+                return rezultat.Uspesno && rezultat.Podaci;
+            }
+            catch (Exception ex)
+            {
+                poruka = $"Greška pri proveri sistema: {ex.Message}";
                 return false;
             }
         }

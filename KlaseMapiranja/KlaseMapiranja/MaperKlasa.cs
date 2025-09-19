@@ -184,11 +184,12 @@ namespace KlaseMapiranja
             return new SazivDTO
             {
                 Id = saziv.Id_saziva,
-                Ime = saziv.Ime,
+                Ime = saziv.Ime ?? "",
+                DatumPocetka = saziv.Pocetak,
+                DatumZavrsetka = saziv.Kraj,
                 PeriodFormatiran = $"{saziv.Pocetak:dd.MM.yyyy} - {saziv.Kraj:dd.MM.yyyy}",
-                Opis = saziv.Opis,
-                                    Aktivan = false,
-                    BrojZasedanja = 0
+                Opis = saziv.Opis ?? "",
+                Aktivan = saziv.Kraj > DateTime.Now
             };
         }
 
@@ -202,45 +203,6 @@ namespace KlaseMapiranja
             return sazivi.Select(s => KonvertujSazivUDTO(s)).ToList();
         }
 
-        /// <summary>
-        /// Konvertuje DataSet sa sazivima u DTO listu
-        /// </summary>
-        public List<SazivDTO> KonvertujSaziveIzDataSet(DataSet dsSazivi)
-        {
-            List<SazivDTO> sazivi = new List<SazivDTO>();
-
-            if (dsSazivi?.Tables?.Count > 0 && dsSazivi.Tables[0].Rows.Count > 0)
-            {
-                foreach (DataRow row in dsSazivi.Tables[0].Rows)
-                {
-                    DateTime? datumPocetka = null;
-                    DateTime? datumZavrsetka = null;
-                    
-                    if (row["pocetak"] != DBNull.Value)
-                        datumPocetka = Convert.ToDateTime(row["pocetak"]);
-                    if (row["kraj"] != DBNull.Value)
-                        datumZavrsetka = Convert.ToDateTime(row["kraj"]);
-
-                    sazivi.Add(new SazivDTO
-                    {
-                        Id = Convert.ToInt32(row["id_saziva"]),
-                        Ime = row["ime"].ToString(),
-                        DatumPocetka = datumPocetka,
-                        DatumZavrsetka = datumZavrsetka,
-                        PeriodFormatiran = datumPocetka.HasValue && datumZavrsetka.HasValue 
-                            ? $"{datumPocetka.Value:dd.MM.yyyy} - {datumZavrsetka.Value:dd.MM.yyyy}"
-                            : "Nepoznato",
-                        Opis = row["opis"]?.ToString() ?? "",
-                        Aktivan = datumZavrsetka.HasValue ? datumZavrsetka.Value > DateTime.Now : false,
-                                            BrojZasedanja = 0,
-                    BrojSednica = 0,
-                    BrojMandata = 0
-                    });
-                }
-            }
-
-            return sazivi;
-        }
 
         /// <summary>
         /// Konvertuje DataSet sa sednicama u DTO listu
@@ -249,7 +211,6 @@ namespace KlaseMapiranja
         {
             List<SednicaDTO> sednice = new List<SednicaDTO>();
 
-            // Debug: ispisujemo šta je u DataSet-u
             if (dsSednice?.Tables?.Count > 0)
             {
                 var tabela = dsSednice.Tables[0];
@@ -302,8 +263,8 @@ namespace KlaseMapiranja
                         IdLica = Convert.ToInt32(row["id_lica"]),
                         IdSaziva = Convert.ToInt32(row["id_saziva"]),
                         IdStranke = Convert.ToInt32(row["id_stranke"]),
-                        ImeLica = row["ime_prezime"]?.ToString() ?? "",
-                        PrezimeLica = row["ime_prezime"]?.ToString() ?? "",
+                        ImeLica = row["ime"]?.ToString() ?? "",
+                        PrezimeLica = row["prezime"]?.ToString() ?? "",
                         NazivStranke = row["naziv_stranke"]?.ToString() ?? "",
                         NazivPozicije = row["naziv_pozicije"]?.ToString() ?? "Poslanik",
                         NazivSaziva = row["saziv_ime"]?.ToString() ?? ""

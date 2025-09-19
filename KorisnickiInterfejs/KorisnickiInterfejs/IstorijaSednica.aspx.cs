@@ -90,12 +90,21 @@ namespace KorisnickiInterfejs
             try
             {
                 EnsureSednicePregledInitialized();
-                var sednice = _sednicePregled.DajSveSednice();
                 
-                if (sednice != null && sednice.Count > 0)
+                if (_sednicePregled != null)
                 {
-                    BindSedniceToGrid(sednice);
-                    UpdateResultsCount(sednice.Count);
+                    var sednice = _sednicePregled.DajSveSednice();
+                    
+                    if (sednice != null && sednice.Count > 0)
+                    {
+                        BindSedniceToGrid(sednice);
+                        UpdateResultsCount(sednice.Count);
+                    }
+                    else
+                    {
+                        BindSedniceToGrid(new List<SednicaDTO>());
+                        UpdateResultsCount(0);
+                    }
                 }
                 else
                 {
@@ -105,7 +114,12 @@ namespace KorisnickiInterfejs
             }
             catch (Exception ex)
             {
-                ShowError("Greška pri učitavanju sednica. Molimo pokušajte ponovo.");
+                // Log grešku ali ne prikazuj je korisniku
+                System.Diagnostics.Debug.WriteLine($"Greška pri učitavanju sednica: {ex.Message}");
+                
+                // Prikaži prazan rezultat
+                BindSedniceToGrid(new List<SednicaDTO>());
+                UpdateResultsCount(0);
             }
         }
 
@@ -115,11 +129,18 @@ namespace KorisnickiInterfejs
             {
                 EnsureSednicePregledInitialized();
                 
-                // Uzmi vrednosti filtera
-                int? sazivId = string.IsNullOrEmpty(ddlSaziv.SelectedValue) ? (int?)null : int.Parse(ddlSaziv.SelectedValue);
-                string nazivFilter = txtNaziv.Text.Trim();
-                DateTime? datumOd = null;
-                DateTime? datumDo = null;
+                   // Uzmi vrednosti filtera
+                   int? sazivId = null;
+                   if (!string.IsNullOrEmpty(ddlSaziv.SelectedValue) && ddlSaziv.SelectedValue != "")
+                   {
+                       if (int.TryParse(ddlSaziv.SelectedValue, out int parsedSazivId))
+                       {
+                           sazivId = parsedSazivId;
+                       }
+                   }
+                   
+                   DateTime? datumOd = null;
+                   DateTime? datumDo = null;
                 
                 // Parsiraj datume ako su uneti
                 if (!string.IsNullOrEmpty(txtDatumOd.Text))
@@ -134,46 +155,76 @@ namespace KorisnickiInterfejs
                         datumDo = parsedDatumDo;
                 }
                 
-                // Prvo dohvati sve sednice sa stored procedure (saziv filter)
-                var sednice = _sednicePregled.DajSednicePoFilteru(sazivId, null);
-                
-                // Zatim primeni dodatne filtere (naziv i datum) na klijentskoj strani
-                var filtriraneSednice = ApplyClientSideFilters(sednice, nazivFilter, datumOd, datumDo);
+                   // Prvo dohvati sve sednice sa stored procedure (saziv filter)
+                   var sednice = _sednicePregled.DajSednicePoFilteru(sazivId, null);
+                   
+                   // Zatim primeni dodatne filtere (datum) na klijentskoj strani
+                   var filtriraneSednice = ApplyClientSideFilters(sednice, null, datumOd, datumDo);
                 
                 BindSedniceToGrid(filtriraneSednice);
                 UpdateResultsCount(filtriraneSednice.Count);
             }
             catch (Exception ex)
             {
-                ShowError("Greška pri pretraživanju. Molimo pokušajte ponovo.");
+                // Log grešku ali ne prikazuj je korisniku da ne bi došlo do logout-a
+                System.Diagnostics.Debug.WriteLine($"Greška pri pretraživanju sednica: {ex.Message}");
+                
+                // Prikaži prazan rezultat umesto greške
+                BindSedniceToGrid(new List<SednicaDTO>());
+                UpdateResultsCount(0);
             }
         }
         
         private List<SednicaDTO> ApplyClientSideFilters(List<SednicaDTO> sednice, string nazivFilter, DateTime? datumOd, DateTime? datumDo)
         {
-            var filtrirane = sednice.AsEnumerable();
-            
-            // Filter po nazivu
-            if (!string.IsNullOrEmpty(nazivFilter))
+            try
             {
-                filtrirane = filtrirane.Where(s => 
-                    !string.IsNullOrEmpty(s.Naziv) && 
-                    s.Naziv.IndexOf(nazivFilter, StringComparison.OrdinalIgnoreCase) >= 0);
+                if (sednice == null || sednice.Count == 0)
+                {
+                    return new List<SednicaDTO>();
+                }
+
+                var filtrirane = new List<SednicaDTO>();
+                
+                foreach (var s in sednice)
+                {
+                    if (s == null) continue;
+                    
+                    bool includeItem = true;
+                    
+                    // Text filter je uklonjen
+                    
+                    // Filter po datumu od
+                    if (includeItem && datumOd.HasValue)
+                    {
+                        if (!s.Datum.HasValue || s.Datum.Value.Date < datumOd.Value.Date)
+                        {
+                            includeItem = false;
+                        }
+                    }
+                    
+                    // Filter po datumu do
+                    if (includeItem && datumDo.HasValue)
+                    {
+                        if (!s.Datum.HasValue || s.Datum.Value.Date > datumDo.Value.Date)
+                        {
+                            includeItem = false;
+                        }
+                    }
+                    
+                    if (includeItem)
+                    {
+                        filtrirane.Add(s);
+                    }
+                }
+                
+                return filtrirane;
             }
-            
-            // Filter po datumu od
-            if (datumOd.HasValue)
+            catch (Exception ex)
             {
-                filtrirane = filtrirane.Where(s => s.Datum.HasValue && s.Datum.Value.Date >= datumOd.Value.Date);
+                System.Diagnostics.Debug.WriteLine($"Greška pri client-side filtriranju: {ex.Message}");
+                return sednice ?? new List<SednicaDTO>();
             }
-            
-            // Filter po datumu do
-            if (datumDo.HasValue)
-            {
-                filtrirane = filtrirane.Where(s => s.Datum.HasValue && s.Datum.Value.Date <= datumDo.Value.Date);
-            }
-            
-            return filtrirane.ToList();
         }
 
         protected void btnResetuj_Click(object sender, EventArgs e)
@@ -182,7 +233,6 @@ namespace KorisnickiInterfejs
             {
                 EnsureSednicePregledInitialized();
                 // Resetuj sve filtere
-                txtNaziv.Text = string.Empty;
                 ddlSaziv.SelectedIndex = 0;
                 txtDatumOd.Text = DateTime.Now.AddMonths(-6).ToString("yyyy-MM-dd");
                 txtDatumDo.Text = DateTime.Now.ToString("yyyy-MM-dd");

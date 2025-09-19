@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using PrezentacionaLogika;
+using PoslovnaLogika;
 
 namespace KorisnickiInterfejs
 {
@@ -39,6 +40,7 @@ namespace KorisnickiInterfejs
             {
                 LoadCurrentSessionInfo();
                 SetDefaultDate();
+                SetConfigurationValues();
             }
             catch (Exception ex)
             {
@@ -105,11 +107,26 @@ namespace KorisnickiInterfejs
         {
             try
             {
-                txtDatumSednice.Text = DateTime.Today.ToString("yyyy-MM-dd");
+                // Postavi default datum - Layer 3 će obaviti validaciju
+                txtDatumSednice.Text = DateTime.Today.AddDays(7).ToString("yyyy-MM-dd");
             }
             catch (Exception ex)
             {
                 // No debug logging for this method
+            }
+        }
+
+        private void SetConfigurationValues()
+        {
+            try
+            {
+                // Layer 4 ne sme da pristupa business rules direktno
+                // Layer 3 će obaviti validaciju
+                hdnMinDanaZaSednicu.Value = "7"; // Default vrednost
+            }
+            catch (Exception ex)
+            {
+                // Greška pri postavljanju konfiguracije
             }
         }
 
@@ -138,12 +155,12 @@ namespace KorisnickiInterfejs
                 DateTime datumSednice = Convert.ToDateTime(txtDatumSednice.Text);
                 string opisSednice = txtOpisSednice.Text.Trim();
                 
-                // Dohvati razlog za hitnost (pravilo 7 dana)
+                // Dohvati razlog za hitnost (pravilo konfigurisanih dana)
                 string razlogHitnosti = txtRazlogHitnosti.Text.Trim();
                 
-                // Ako je sednica manje od 7 dana unapred, koristi razlog kao opis
-                TimeSpan razlika = datumSednice.Date - DateTime.Today;
-                if (razlika.TotalDays < 7 && !string.IsNullOrWhiteSpace(razlogHitnosti))
+                // Layer 4 ne sme da implementira business logiku
+                // Layer 3 će obaviti validaciju i kombinovanje opisa
+                if (!string.IsNullOrWhiteSpace(razlogHitnosti))
                 {
                     // Kombinuj opis i razlog za hitnost
                     opisSednice = string.IsNullOrWhiteSpace(opisSednice) 

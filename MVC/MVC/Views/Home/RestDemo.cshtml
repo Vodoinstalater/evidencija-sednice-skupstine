@@ -1,0 +1,159 @@
+@{
+    ViewData["Title"] = "REST API Demo";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">🚀 REST Web Servis Demo</h2>
+    <div class="alert alert-info text-center">
+        <strong>ℹ️ Napomena:</strong> REST API demo stranica.
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">📋 Testiraj REST API</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Izaberi endpoint:</label>
+                        <select id="endpointSelect" class="form-select">
+                            <option value="sednice">Sednice</option>
+                            <option value="sazivi">Sazivi</option>
+                            <option value="mandati">Mandati</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">ID (opciono):</label>
+                        <input type="number" id="idInput" class="form-control" placeholder="Unesi ID za pojedinačni podatak">
+                    </div>
+                    
+                    <button onclick="testirajREST()" class="btn btn-primary w-100">
+                        🧪 Testiraj API
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">📊 Rezultat</h5>
+                </div>
+                <div class="card-body">
+                    <div id="rezultat" class="text-muted">
+                        Klikni "Testiraj API" da vidiš rezultat...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">🔗 Dostupni REST Endpoints</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Metoda</th>
+                                    <th>URL</th>
+                                    <th>Opis</th>
+                                    <th>Primer</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge bg-success">GET</span></td>
+                                    <td><code>/api/Sednica/sednice</code></td>
+                                    <td>Dohvata sve sednice</td>
+                                    <td><code>/api/Sednica/sednice</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge bg-success">GET</span></td>
+                                    <td><code>/api/Sednica/sednice/{id}</code></td>
+                                    <td>Dohvata sednicu po ID-u</td>
+                                    <td><code>/api/Sednica/sednice/1</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge bg-success">GET</span></td>
+                                    <td><code>/api/Sednica/sazivi</code></td>
+                                    <td>Dohvata sve sazive</td>
+                                    <td><code>/api/Sednica/sazivi</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge bg-success">GET</span></td>
+                                    <td><code>/api/Sednica/mandati</code></td>
+                                    <td>Dohvata sve mandate</td>
+                                    <td><code>/api/Sednica/mandati</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">
+            ← Nazad na početnu
+        </a>
+    </div>
+</div>
+
+<script>
+function testirajREST() {
+    const endpoint = document.getElementById('endpointSelect').value;
+    const id = document.getElementById('idInput').value;
+    const rezultatDiv = document.getElementById('rezultat');
+    
+    rezultatDiv.innerHTML = '<div class="text-center"><div class="spinner-border text-primary" role="status"></div><br>Učitavam...</div>';
+    
+    let url = `http://localhost:5002/api/Sednica/${endpoint}`;
+    if (id && endpoint === 'sednice') {
+        url += `/${id}`;
+    }
+    
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.uspesno) {
+                rezultatDiv.innerHTML = `
+                    <div class="alert alert-success">
+                        <h6>✅ ${data.poruka}</h6>
+                        <p><strong>Broj podataka:</strong> ${data.broj || 'N/A'}</p>
+                        <hr>
+                        <h6>Podaci:</h6>
+                        <pre class="bg-light p-2 rounded">${JSON.stringify(data.podaci, null, 2)}</pre>
+                    </div>
+                `;
+            } else {
+                rezultatDiv.innerHTML = `
+                    <div class="alert alert-danger">
+                        <h6>❌ Greška</h6>
+                        <p>${data.poruka}</p>
+                    </div>
+                `;
+            }
+        })
+        .catch(error => {
+            rezultatDiv.innerHTML = `
+                <div class="alert alert-danger">
+                    <h6>❌ Greška pri pozivu API-ja</h6>
+                    <p>${error.message}</p>
+                </div>
+            `;
+        });
+}
+</script>

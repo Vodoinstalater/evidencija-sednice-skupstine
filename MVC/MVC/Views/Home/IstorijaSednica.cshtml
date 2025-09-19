@@ -1,0 +1,95 @@
+@model List<KlaseMapiranja.SednicaDTO>
+
+@{
+    ViewData["Title"] = "Istorija Sednica";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">📋 Istorija Sednica</h2>
+    
+    @if (ViewBag.Greska != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <strong>Greška:</strong> @ViewBag.Greska
+        </div>
+    }
+    
+    @if (ViewBag.Poruka != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @ViewBag.Poruka
+        </div>
+    }
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Naziv</th>
+                        <th>Datum</th>
+                        <th>Opis</th>
+                        <th>Zasedanje</th>
+                        <th>Saziv</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sednica in Model)
+                    {
+                        <tr>
+                            <td><strong>@sednica.Id</strong></td>
+                            <td>@sednica.Naziv</td>
+                            <td>
+                                @if (sednica.Datum.HasValue)
+                                {
+                                    <span class="text-primary">@sednica.DatumFormatiran</span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">Nije postavljen</span>
+                                }
+                            </td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(sednica.Opis))
+                                {
+                                    <span title="@sednica.Opis">
+                                        @(sednica.Opis.Length > 50 ? sednica.Opis.Substring(0, 50) + "..." : sednica.Opis)
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">Bez opisa</span>
+                                }
+                            </td>
+                            <td>
+                                <span class="badge bg-info">@sednica.NazivZasedanja</span>
+                            </td>
+                            <td>
+                                <span class="badge bg-success">@sednica.NazivSaziva</span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="text-center mt-3">
+            <small class="text-muted">Ukupno sednica: @Model.Count</small>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info text-center" role="alert">
+            <h5>📭 Nema podataka</h5>
+            <p>Trenutno nema dostupnih sednica za prikaz.</p>
+        </div>
+    }
+    
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">
+            ← Nazad na početnu
+        </a>
+    </div>
+</div>

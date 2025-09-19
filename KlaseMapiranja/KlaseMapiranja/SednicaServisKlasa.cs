@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 //
+using DBUtils;
 using KlasePodataka;
 using PoslovnaLogika;
 
@@ -61,15 +62,12 @@ namespace KlaseMapiranja
                 List<SazivDTO> saziviDTO = sazivi.Select(s => new SazivDTO
                 {
                     Id = s.Id_saziva,
-                    Ime = s.Ime,
+                    Ime = s.Ime ?? "",
                     DatumPocetka = s.Pocetak,
                     DatumZavrsetka = s.Kraj,
                     PeriodFormatiran = $"{s.Pocetak:dd.MM.yyyy} - {s.Kraj:dd.MM.yyyy}",
-                    Opis = s.Opis,
-                    Aktivan = s.Kraj > DateTime.Now,
-                    BrojZasedanja = 0,
-                    BrojSednica = 0,
-                    BrojMandata = 0
+                    Opis = s.Opis ?? "",
+                    Aktivan = s.Kraj > DateTime.Now
                 }).ToList();
                 
                 return _maper.KreirajUspeh(saziviDTO, $"Dohvaćeno je {saziviDTO.Count} saziva.");
@@ -77,6 +75,39 @@ namespace KlaseMapiranja
             catch (Exception ex)
             {
                 return _maper.KreirajGresku<List<SazivDTO>>("Greška pri dohvatanju saziva.", ex);
+            }
+        }
+
+        /// <summary>
+        /// Servis za dohvatanje aktivnog saziva
+        /// </summary>
+        public ServiceResult<SazivDTO> DajAktivanSaziv()
+        {
+            try
+            {
+                SazivKlasa aktivanSaziv = _poslovnaLogika.DajAktivanSaziv();
+                
+                if (aktivanSaziv != null)
+                {
+                    SazivDTO sazivDTO = new SazivDTO
+                    {
+                        Id = aktivanSaziv.Id_saziva,
+                        Ime = aktivanSaziv.Ime ?? "",
+                        DatumPocetka = aktivanSaziv.Pocetak,
+                        DatumZavrsetka = aktivanSaziv.Kraj,
+                        PeriodFormatiran = $"{aktivanSaziv.Pocetak:dd.MM.yyyy} - {aktivanSaziv.Kraj:dd.MM.yyyy}",
+                        Opis = aktivanSaziv.Opis ?? "",
+                        Aktivan = true
+                    };
+                    
+                    return _maper.KreirajUspeh(sazivDTO, "Aktivan saziv je uspešno dohvaćen.");
+                }
+                
+                return _maper.KreirajGresku<SazivDTO>("Nema aktivnog saziva.");
+            }
+            catch (Exception ex)
+            {
+                return _maper.KreirajGresku<SazivDTO>("Greška pri dohvatanju aktivnog saziva.", ex);
             }
         }
 
@@ -167,19 +198,36 @@ namespace KlaseMapiranja
                 {
                     foreach (DataRow row in dsSazivi.Tables[0].Rows)
                     {
-                        sazivi.Add(new SazivDTO
+                        try
                         {
-                            Id = Convert.ToInt32(row["id_saziva"]),
-                            Ime = row["ime"].ToString(),
-                            DatumPocetka = Convert.ToDateTime(row["pocetak"]),
-                            DatumZavrsetka = Convert.ToDateTime(row["kraj"]),
-                            PeriodFormatiran = $"{Convert.ToDateTime(row["pocetak"]):dd.MM.yyyy} - {Convert.ToDateTime(row["kraj"]):dd.MM.yyyy}",
-                            Opis = row["opis"].ToString(),
-                            Aktivan = Convert.ToDateTime(row["kraj"]) > DateTime.Now,
-                            BrojZasedanja = 0,
-                            BrojSednica = 0,
-                            BrojMandata = 0
-                        });
+                            DateTime? datumPocetka = null;
+                            DateTime? datumZavrsetka = null;
+                            
+                            // Safe date conversion
+                            if (row["pocetak"] != DBNull.Value)
+                                datumPocetka = Convert.ToDateTime(row["pocetak"]);
+                            if (row["kraj"] != DBNull.Value)
+                                datumZavrsetka = Convert.ToDateTime(row["kraj"]);
+                            
+                            int sazivId = Convert.ToInt32(row["id_saziva"]);
+                            sazivi.Add(new SazivDTO
+                            {
+                                Id = sazivId,
+                                Ime = row["ime"]?.ToString() ?? "",
+                                DatumPocetka = datumPocetka,
+                                DatumZavrsetka = datumZavrsetka,
+                                PeriodFormatiran = datumPocetka.HasValue && datumZavrsetka.HasValue 
+                                    ? $"{datumPocetka.Value:dd.MM.yyyy} - {datumZavrsetka.Value:dd.MM.yyyy}"
+                                    : "Nepoznato",
+                                Opis = row["opis"]?.ToString() ?? "",
+                                Aktivan = datumZavrsetka.HasValue ? datumZavrsetka.Value > DateTime.Now : false
+                            });
+                        }
+                        catch (Exception)
+                        {
+                            // Skip this row if there's an error, continue with others
+                            continue;
+                        }
                     }
                 }
                 
@@ -315,7 +363,19 @@ namespace KlaseMapiranja
             try
             {
                 string poruka;
-                bool uspesno = _poslovnaLogika.KreirajNovoZasedanje(nazivZasedanja, tipZasedanja, out poruka);
+                
+                // 1. VALIDACIJA - Layer 2 (PoslovnaLogika)
+                if (!_poslovnaLogika.DaLiSeMozeKreiratiZasedanje(nazivZasedanja, DateTime.Today.AddDays(1), "Automatski kreiran", tipZasedanja, out poruka))
+                {
+                    return _maper.KreirajGresku<bool>(poruka);
+                }
+                
+                // 2. DATA MANIPULATION - Layer 1 (KlasePodataka)
+                KonekcijaKlasa konekcija = new KonekcijaKlasa();
+                konekcija.OtvoriKonekciju();
+                UpravljanjeZasedanjimaKlasa upravljanjeZasedanjima = new UpravljanjeZasedanjimaKlasa(konekcija);
+                
+                bool uspesno = upravljanjeZasedanjima.KreirajNovoZasedanjeSaValidacijom(nazivZasedanja, DateTime.Today.AddDays(1), "Automatski kreiran", tipZasedanja, out poruka);
                 
                 if (uspesno)
                     return _maper.KreirajUspeh(true, poruka);
@@ -335,16 +395,28 @@ namespace KlaseMapiranja
         {
             try
             {
+                // Prvo validacija u Layer 2
                 string poruka;
-                bool uspesno = _poslovnaLogika.KreirajNovuSednicu(idZasedanja, nazivSednice, datumSednice, opisSednice, pitanja, out poruka);
+                bool validacijaUspešna = _poslovnaLogika.KreirajNovuSednicu(idZasedanja, nazivSednice, datumSednice, opisSednice, pitanja, out poruka);
                 
-                if (uspesno)
+                if (!validacijaUspešna)
                 {
-                    return _maper.KreirajUspeh(true, poruka);
+                    return _maper.KreirajGresku<bool>(poruka);
+                }
+
+                // Ako je validacija prošla, pozovi Layer 1 za kreiranje
+                KonekcijaKlasa konekcija = new KonekcijaKlasa(); // Koristi default konekciju;
+                UpravljanjeSednicamaKlasa upravljanjeSednicama = new UpravljanjeSednicamaKlasa(konekcija);
+                
+                bool kreiranjeUspešno = upravljanjeSednicama.KreirajNovuSednicuSaValidacijom(nazivSednice, datumSednice, opisSednice, pitanja, out string layer1Poruka);
+                
+                if (kreiranjeUspešno)
+                {
+                    return _maper.KreirajUspeh(true, "Sednica je uspešno kreirana.");
                 }
                 else
                 {
-                    return _maper.KreirajGresku<bool>(poruka);
+                    return _maper.KreirajGresku<bool>(layer1Poruka);
                 }
             }
             catch (Exception ex)
@@ -361,7 +433,19 @@ namespace KlaseMapiranja
             try
             {
                 string poruka;
-                bool uspesno = _poslovnaLogika.KreirajNovuSednicuSaPravilima(nazivSednice, datumSednice, opisSednice, pitanja, out poruka);
+                
+                // 1. VALIDACIJA - Layer 2 (PoslovnaLogika)
+                if (!_poslovnaLogika.DaLiSeMozeKreiratiSednica(nazivSednice, datumSednice, opisSednice, pitanja, out poruka))
+                {
+                    return _maper.KreirajGresku<bool>(poruka);
+                }
+                
+                // 2. DATA MANIPULATION - Layer 1 (KlasePodataka)
+                KonekcijaKlasa konekcija = new KonekcijaKlasa();
+                konekcija.OtvoriKonekciju();
+                UpravljanjeSednicamaKlasa upravljanjeSednicama = new UpravljanjeSednicamaKlasa(konekcija);
+                
+                bool uspesno = upravljanjeSednicama.KreirajNovuSednicuSaValidacijom(nazivSednice, datumSednice, opisSednice, pitanja, out poruka);
                 
                 if (uspesno)
                 {
@@ -390,7 +474,19 @@ namespace KlaseMapiranja
             try
             {
                 string poruka;
-                bool uspesno = _poslovnaLogika.KreirajNoviSaziv(naziv, pocetak, zavrsetak, opis, out poruka);
+                
+                // 1. VALIDACIJA - Layer 2 (PoslovnaLogika)
+                if (!_poslovnaLogika.DaLiSeMozeKreiratiSaziv(naziv, pocetak, zavrsetak, opis, out poruka))
+                {
+                    return _maper.KreirajGresku<bool>(poruka);
+                }
+                
+                // 2. DATA MANIPULATION - Layer 1 (KlasePodataka)
+                KonekcijaKlasa konekcija = new KonekcijaKlasa();
+                konekcija.OtvoriKonekciju();
+                UpravljanjeSazivimaKlasa upravljanjeSazivima = new UpravljanjeSazivimaKlasa(konekcija);
+                
+                bool uspesno = upravljanjeSazivima.KreirajNoviSazivSaValidacijom(naziv, pocetak, zavrsetak, opis, out poruka);
                 
                 if (uspesno)
                     return _maper.KreirajUspeh(true, poruka);
@@ -411,13 +507,29 @@ namespace KlaseMapiranja
         {
             try
             {
+                // Prvo validacija u Layer 2
                 string poruka;
-                bool uspesno = _poslovnaLogika.KreirajNovuSednicu(naziv, datum, opis, pitanja, objasnjenje, out poruka);
+                bool validacijaUspešna = _poslovnaLogika.KreirajNovuSednicu(naziv, datum, opis, pitanja, objasnjenje, out poruka);
                 
-                if (uspesno)
-                    return _maper.KreirajUspeh(true, poruka);
-                else
+                if (!validacijaUspešna)
+                {
                     return _maper.KreirajGresku<bool>(poruka);
+                }
+
+                // Ako je validacija prošla, pozovi Layer 1 za kreiranje
+                KonekcijaKlasa konekcija = new KonekcijaKlasa(); // Koristi default konekciju;
+                UpravljanjeSednicamaKlasa upravljanjeSednicama = new UpravljanjeSednicamaKlasa(konekcija);
+                
+                bool kreiranjeUspešno = upravljanjeSednicama.KreirajNovuSednicuSaValidacijom(naziv, datum, opis, pitanja, out string layer1Poruka);
+                
+                if (kreiranjeUspešno)
+                {
+                    return _maper.KreirajUspeh(true, "Sednica je uspešno kreirana.");
+                }
+                else
+                {
+                    return _maper.KreirajGresku<bool>(layer1Poruka);
+                }
             }
             catch (Exception ex)
             {
@@ -434,7 +546,19 @@ namespace KlaseMapiranja
             try
             {
                 string poruka;
-                bool uspesno = _poslovnaLogika.KreirajNovoLicaIMandat(ime, prezime, korisnickoIme, lozinka, 
+                
+                // 1. VALIDACIJA - Layer 2 (PoslovnaLogika)
+                if (!_poslovnaLogika.DaLiSeMozeKreiratiLiceIMandat(ime, prezime, korisnickoIme, lozinka, 
+                    pozicijaId, strankaId, pol, datumRodjenja, bio, out poruka))
+                {
+                    return _maper.KreirajGresku<bool>(poruka);
+                }
+                
+                // 2. DATA MANIPULATION - Layer 1 (KlasePodataka)
+                KonekcijaKlasa konekcija = new KonekcijaKlasa(); // Koristi default konekciju
+                UpravljanjeMandatimaKlasa upravljanjeMandatima = new UpravljanjeMandatimaKlasa(konekcija);
+                
+                bool uspesno = upravljanjeMandatima.KreirajNovoLiceIMandat(ime, prezime, korisnickoIme, lozinka, 
                     pozicijaId, strankaId, pol, datumRodjenja, bio, out poruka);
                 
                 if (uspesno)
@@ -645,7 +769,7 @@ namespace KlaseMapiranja
         }
 
         /// <summary>
-        /// Servis za kreiranje novog lica
+        /// Servis za kreiranje novog lica (bez mandata)
         /// </summary>
         public ServiceResult<bool> KreirajNovoLice(string ime, string prezime, string korisnickoIme, string lozinka, 
                                                   int pozicijaId, int strankaId, char pol, DateTime datumRodjenja, 
@@ -653,8 +777,52 @@ namespace KlaseMapiranja
         {
             try
             {
+                // Prvo validacija u Layer 2
                 string poruka;
-                bool rezultat = _poslovnaLogika.KreirajNovoLice(ime, prezime, korisnickoIme, lozinka, pozicijaId, strankaId, pol, datumRodjenja, biografija, out poruka);
+                bool validacijaUspešna = _poslovnaLogika.KreirajNovoLice(ime, prezime, korisnickoIme, lozinka, pozicijaId, strankaId, pol, datumRodjenja, biografija, out poruka);
+                
+                if (!validacijaUspešna)
+                {
+                    return _maper.KreirajGresku<bool>(poruka);
+                }
+
+                // Ako je validacija prošla, pozovi Layer 1 za kreiranje
+                KonekcijaKlasa konekcija = new KonekcijaKlasa(); // Koristi default konekciju
+                UpravljanjeMandatimaKlasa upravljanjeMandatima = new UpravljanjeMandatimaKlasa(konekcija);
+                
+                bool kreiranjeUspešno = upravljanjeMandatima.KreirajNovoLice(ime, prezime, korisnickoIme, lozinka, pozicijaId, strankaId, pol, datumRodjenja, biografija, out string layer1Poruka);
+                
+                if (kreiranjeUspešno)
+                {
+                    return _maper.KreirajUspeh(true, "Lice je uspešno kreirano.");
+                }
+                else
+                {
+                    return _maper.KreirajGresku<bool>(layer1Poruka);
+                }
+            }
+            catch (Exception ex)
+            {
+                return new ServiceResult<bool>
+                {
+                    Uspesno = false,
+                    Podaci = false,
+                    Poruka = $"Greška pri kreiranju lica: {ex.Message}"
+                };
+            }
+        }
+
+        /// <summary>
+        /// Servis za kreiranje novog lica i mandata zajedno
+        /// </summary>
+        public ServiceResult<bool> KreirajNovoLiceIMandat(string ime, string prezime, string korisnickoIme, string lozinka, 
+                                                         int pozicijaId, int strankaId, char pol, DateTime datumRodjenja, 
+                                                         string biografija)
+        {
+            try
+            {
+                string poruka;
+                bool rezultat = _poslovnaLogika.KreirajNovoLiceIMandat(ime, prezime, korisnickoIme, lozinka, pozicijaId, strankaId, pol, datumRodjenja, biografija, out poruka);
                 
                 if (rezultat)
                 {
@@ -681,7 +849,7 @@ namespace KlaseMapiranja
                 {
                     Uspesno = false,
                     Podaci = false,
-                    Poruka = $"Greška pri kreiranju lica: {ex.Message}"
+                    Poruka = $"Greška pri kreiranju lica i mandata: {ex.Message}"
                 };
             }
         }
@@ -741,6 +909,46 @@ namespace KlaseMapiranja
             }
         }
 
+        /// <summary>
+        /// Dohvata statistike mandata za aktivan saziv
+        /// </summary>
+        /// <returns>ServiceResult sa statistikama mandata</returns>
+        public ServiceResult<object> DajStatistikeMandataZaAktivanSaziv()
+        {
+            try
+            {
+                List<MandatKlasa> mandati = _poslovnaLogika.DajMandateZaAktivanSaziv();
+                
+                if (mandati == null || mandati.Count == 0)
+                {
+                    return _maper.KreirajUspeh((object)new
+                    {
+                        UkupnoMandata = 0,
+                        AktivnihMandata = 0,
+                        Poslanika = 0,
+                        Stranaka = 0
+                    }, "Nema mandata za aktivan saziv.");
+                }
+
+                int ukupno = mandati.Count;
+                int aktivnih = mandati.Count; // Svi mandate su aktivni u trenutnom sazivu
+                int poslanika = mandati.Select(m => m.Id_lica).Distinct().Count();
+                int stranaka = mandati.Select(m => m.NazivStranke).Distinct().Count();
+
+                return _maper.KreirajUspeh((object)new
+                {
+                    UkupnoMandata = ukupno,
+                    AktivnihMandata = aktivnih,
+                    Poslanika = poslanika,
+                    Stranaka = stranaka
+                }, $"Dohvaćene su statistike za {ukupno} mandata.");
+            }
+            catch (Exception ex)
+            {
+                return _maper.KreirajGresku<object>($"Greška pri dohvatanju statistika mandata: {ex.Message}");
+            }
+        }
+
         // ========================================================================
         // METODE ZA POZICIJE
         // ========================================================================
@@ -764,6 +972,27 @@ namespace KlaseMapiranja
             catch (Exception ex)
             {
                 return _maper.KreirajGresku<List<PozicijaDTO>>($"Greška pri dohvatanju pozicija: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Validira da li je sistem spreman za rad
+        /// </summary>
+        public ServiceResult<bool> DaLiJeSistemSpremanZaRad()
+        {
+            try
+            {
+                bool spreman = _poslovnaLogika.DaLiJeSistemSpremanZaRad(out string poruka);
+                return new ServiceResult<bool>
+                {
+                    Uspesno = true,
+                    Podaci = spreman,
+                    Poruka = poruka
+                };
+            }
+            catch (Exception ex)
+            {
+                return _maper.KreirajGresku<bool>("Greška pri proveri sistema.", ex);
             }
         }
 

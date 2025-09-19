@@ -188,11 +188,6 @@
         
         <div class="search-row">
             <div class="search-field">
-                <label for="txtNaziv">Naziv sednice:</label>
-                <asp:TextBox ID="txtNaziv" runat="server" placeholder="Unesite naziv sednice..."></asp:TextBox>
-            </div>
-            
-            <div class="search-field">
                 <label for="ddlSaziv">Saziv:</label>
                 <asp:DropDownList ID="ddlSaziv" runat="server">
                     <asp:ListItem Text="-- Svi sazivi --" Value="" />
@@ -252,7 +247,7 @@
     <div style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 8px; border-left: 4px solid #2196f3;">
         <h4 style="margin: 0 0 10px 0; color: #1976d2;">ℹ️ Informacije</h4>
         <p style="margin: 0; color: #1565c0; font-size: 14px;">
-            Ova stranica prikazuje istoriju svih sednica skupštine. Možete koristiti filtere za pretragu po nazivu, 
+            Ova stranica prikazuje istoriju svih sednica skupštine. Možete koristiti filtere za pretragu po 
                             sazivu ili datumu. Kliknite na "Pretraži" za primenu filtera ili "Resetuj" za uklanjanje svih filtera.
         </p>
     </div>

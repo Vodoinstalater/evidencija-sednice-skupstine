@@ -1,0 +1,146 @@
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\RestServis.staticwebassets.endpoints.json
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\RestServis.exe
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\RestServis.deps.json
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\RestServis.runtimeconfig.json
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\RestServis.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\RestServis.pdb
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\KlaseMapiranja.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\KlasePodataka.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\PoslovnaLogika.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\DBUtils.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\KlaseMapiranja.pdb
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\KlasePodataka.pdb
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\PoslovnaLogika.pdb
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\DBUtils.pdb
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.csproj.AssemblyReference.cache
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.AssemblyInfoInputs.cache
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.AssemblyInfo.cs
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.csproj.CoreCompileInputs.cache
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\scopedcss\bundle\RestServis.styles.css
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.csproj.Up2Date
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\refint\RestServis.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.pdb
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.genruntimeconfig.cache
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\obj\Debug\net8.0\ref\RestServis.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\BusinessRulesConfig.xml
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Penguin\Desktop\Skupstina\RestServis\RestServis\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\BusinessRulesConfig.xml
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\RestServis.staticwebassets.endpoints.json
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\RestServis.exe
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\RestServis.deps.json
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\RestServis.runtimeconfig.json
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\RestServis.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\RestServis.pdb
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\DBUtils.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\KlaseMapiranja.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\KlasePodataka.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\PoslovnaLogika.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\KlaseMapiranja.pdb
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\PoslovnaLogika.pdb
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\KlasePodataka.pdb
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\bin\Debug\net8.0\DBUtils.pdb
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\RestServis.csproj.AssemblyReference.cache
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\RestServis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\RestServis.AssemblyInfoInputs.cache
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\RestServis.AssemblyInfo.cs
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\RestServis.csproj.CoreCompileInputs.cache
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\RestServis.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\RestServis.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\scopedcss\bundle\RestServis.styles.css
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\RestServis.csproj.Up2Date
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\RestServis.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\refint\RestServis.dll
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\RestServis.pdb
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\RestServis.genruntimeconfig.cache
+C:\Users\Penguin\Desktop\RVS Seminarski\FINAL\Skupstina fINAL\RestServis\RestServis\obj\Debug\net8.0\ref\RestServis.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\BusinessRulesConfig.xml
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\RestServis.staticwebassets.endpoints.json
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\RestServis.exe
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\RestServis.deps.json
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\RestServis.runtimeconfig.json
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\RestServis.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\RestServis.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\DBUtils.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\KlaseMapiranja.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\KlasePodataka.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\PoslovnaLogika.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\KlaseMapiranja.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\PoslovnaLogika.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\KlasePodataka.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\bin\Debug\net8.0\DBUtils.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.csproj.AssemblyReference.cache
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.AssemblyInfoInputs.cache
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.AssemblyInfo.cs
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.csproj.CoreCompileInputs.cache
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\scopedcss\bundle\RestServis.styles.css
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.csproj.Up2Date
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\refint\RestServis.dll
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.pdb
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\RestServis.genruntimeconfig.cache
+C:\Users\Penguin\Desktop\SEMINARSKI RAD\Skupstina\RestServis\RestServis\obj\Debug\net8.0\ref\RestServis.dll

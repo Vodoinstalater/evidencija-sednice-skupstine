@@ -23,9 +23,12 @@ namespace KlasePodataka
         public List<LicaKlasa> DajSvaLica()
         {
             List<LicaKlasa> lica = new List<LicaKlasa>();
-            DataSet ds = this.DajPodatke("SELECT * FROM lica ORDER BY prezime, ime");
             
-            if (ds?.Tables?.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            try
+            {
+                DataSet ds = this.DajPodatke("SELECT * FROM lica ORDER BY prezime, ime");
+                
+                if (ds?.Tables?.Count > 0 && ds.Tables[0].Rows.Count > 0)
             {
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
@@ -43,6 +46,11 @@ namespace KlasePodataka
                         Bio = row["bio"]?.ToString() ?? ""
                     });
                 }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw; // Re-throw the exception for proper error handling
             }
             
             return lica;

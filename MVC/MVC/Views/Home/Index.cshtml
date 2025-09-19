@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Početna - MVC";
+}
+
+<div style="text-align: center; padding: 50px; max-width: 800px; margin: 0 auto;">
+    <div style="margin-bottom: 40px;">
+        <h1 style="color: #2c3e50; font-size: 2.5em; margin-bottom: 20px;">🏛️ Evidencija Sednica Skupštine</h1>
+        <h2 style="color: #7f8c8d; font-size: 1.5em; font-weight: normal;">MVC Demonstrativni Projekt</h2>
+    </div>
+    
+    @if (ViewBag.Greska != null)
+    {
+        <div style="background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; padding: 15px; border-radius: 8px; margin-bottom: 30px;">
+            <h4 style="margin: 0 0 10px 0;">⚠️ Greška konekcije</h4>
+            <p style="margin: 0;">@ViewBag.Greska</p>
+        </div>
+    }
+    
+    <div style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 15px; padding: 30px; margin-bottom: 30px;">
+        <h3 style="color: #34495e; margin-bottom: 20px;">Dobrodošli u sistem</h3>
+        <p style="color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 0;">
+            Sistem za evidenciju sednica skupštine sa Model-View-Controller arhitekturom.
+        </p>
+    </div>
+    
+    <div class="text-center mt-4">
+        <h3>🚀 Dostupne funkcionalnosti</h3>
+        <div class="row mt-3">
+            <div class="col-md-4 mb-3">
+                <a href="@Url.Action("IstorijaSednica", "Home")" class="btn btn-outline-primary btn-lg w-100">
+                    📋 Istorija Sednica
+                </a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a href="@Url.Action("IstorijaSaziva", "Home")" class="btn btn-outline-success btn-lg w-100">
+                    🏛️ Istorija Saziva
+                </a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a href="@Url.Action("PogledajMandate", "Home")" class="btn btn-outline-info btn-lg w-100">
+                    👥 Pogledaj Mandate
+                </a>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6 offset-md-3">
+                <a href="@Url.Action("RestDemo", "Home")" class="btn btn-warning btn-lg w-100">
+                    🔗 REST API Demo
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div style="background-color: #e8f4fd; border: 1px solid #bee5eb; border-radius: 10px; padding: 20px;">
+        <h4 style="color: #0c5460; margin: 0 0 15px 0;">ℹ️ O sistemu</h4>
+        <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+            <ul style="color: #0c5460; line-height: 1.6;">
+                <li><strong>Model:</strong> DTO klase za prenos podataka</li>
+                <li><strong>View:</strong> Razor sintaksa za prikaz podataka</li>
+                <li><strong>Controller:</strong> Upravlja logikom aplikacije</li>
+                <li><strong>Arhitektura:</strong> Model-View-Controller pattern</li>
+            </ul>
+        </div>
+    </div>
+</div>

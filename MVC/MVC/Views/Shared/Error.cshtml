@@ -1,0 +1,29 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Greška";
+}
+
+<div class="text-center">
+    <h1 class="text-danger">Greška</h1>
+    <h2 class="text-danger">Došlo je do greške prilikom obrade vašeg zahteva.</h2>
+
+    @if (Model.ShowRequestId)
+    {
+        <p>
+            <strong>Request ID:</strong> <code>@Model.RequestId</code>
+        </p>
+    }
+
+    <div class="alert alert-warning" role="alert">
+        <h3>Šta možete uraditi:</h3>
+        <ul class="text-start">
+            <li>Pokušajte ponovo da učitate stranicu</li>
+            <li>Proverite da li je URL ispravan</li>
+            <li>Kontaktirajte administratora sistema</li>
+        </ul>
+    </div>
+
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">
+        ← Nazad na početnu
+    </a>
+</div>

@@ -102,7 +102,10 @@ namespace PrezentacionaLogika
                     if (dsKorisnik != null && dsKorisnik.Tables.Count > 0 && dsKorisnik.Tables[0].Rows.Count > 0)
                     {
                         DataRow row = dsKorisnik.Tables[0].Rows[0];
-                        return Convert.ToInt32(row["pozicija"]);
+                        if (row["pozicija"] != null && row["pozicija"] != DBNull.Value)
+                        {
+                            return Convert.ToInt32(row["pozicija"]);
+                        }
                     }
                 }
                 catch (Exception)

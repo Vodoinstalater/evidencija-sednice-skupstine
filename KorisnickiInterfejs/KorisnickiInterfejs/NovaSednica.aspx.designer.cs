@@ -121,6 +121,15 @@ namespace KorisnickiInterfejs {
         protected global::System.Web.UI.WebControls.HiddenField hdnQuestions;
         
         /// <summary>
+        /// hdnMinDanaZaSednicu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnMinDanaZaSednicu;
+        
+        /// <summary>
         /// btnKreirajSednicu control.
         /// </summary>
         /// <remarks>

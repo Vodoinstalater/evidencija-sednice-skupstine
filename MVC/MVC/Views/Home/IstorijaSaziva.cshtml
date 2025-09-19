@@ -1,0 +1,97 @@
+@model List<KlaseMapiranja.SazivDTO>
+@{
+    ViewData["Title"] = "Istorija Saziva";
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5">🏛️ Istorija Saziva</h1>
+            <p class="lead">Pregled svih saziva skupštine sa periodima i aktivnostima</p>
+        </div>
+    </div>
+
+    @if (ViewBag.Greska != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <strong>Greška:</strong> @ViewBag.Greska
+        </div>
+    }
+
+    @if (ViewBag.Poruka != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @ViewBag.Poruka
+        </div>
+    }
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="row">
+            @foreach (var saziv in Model)
+            {
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 @(saziv.Aktivan ? "border-success" : "border-secondary")">
+                        <div class="card-header @(saziv.Aktivan ? "bg-success text-white" : "bg-secondary text-white")">
+                            <h5 class="card-title mb-0">
+                                @if (saziv.Aktivan)
+                                {
+                                    <span class="badge bg-light text-success me-2">AKTIVAN</span>
+                                }
+                                @saziv.Ime
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <strong>Period:</strong>
+                                <div class="text-primary fw-bold">@saziv.PeriodFormatiran</div>
+                            </div>
+                            
+                            @if (!string.IsNullOrEmpty(saziv.Opis))
+                            {
+                                <div class="mb-3">
+                                    <strong>Opis:</strong>
+                                    <p class="text-muted mb-0">@saziv.Opis</p>
+                                </div>
+                            }
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">
+                                ID: @saziv.Id | 
+                                @if (saziv.DatumPocetka.HasValue)
+                                {
+                                    <span>Početak: @saziv.DatumPocetka.Value.ToString("dd.MM.yyyy")</span>
+                                }
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="alert alert-info">
+                    <strong>Ukupno saziva:</strong> @Model.Count | 
+                    <strong>Aktivnih:</strong> @Model.Count(s => s.Aktivan) | 
+                    <strong>Završenih:</strong> @Model.Count(s => !s.Aktivan)
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning" role="alert">
+            <h5>Nema podataka</h5>
+            <p>Trenutno nema saziva za prikaz.</p>
+        </div>
+    }
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">
+                ← Nazad na početnu
+            </a>
+        </div>
+    </div>
+</div>

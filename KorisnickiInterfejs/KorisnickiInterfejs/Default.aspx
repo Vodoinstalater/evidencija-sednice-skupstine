@@ -126,7 +126,7 @@
             </ul>
         </div>
         
-        <div>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
             <asp:Button ID="btnLogin" runat="server" Text="PRIJAVITE SE" 
                 CssClass="welcome-button" OnClick="btnLogin_Click" />
         </div>
@@ -135,7 +135,8 @@
             <p><strong>Verzija sistema:</strong> 1.0.0</p>
             <p><strong>Tehnologija:</strong> ASP.NET Web Forms, C#, MS SQL Server</p>
             <p><strong>Arhitektura:</strong> 4-slojna aplikacija sa SOAP servisima</p>
-            <p><strong>Autor:</strong></p>
+            <p><strong>Autor:</strong> Uroš Vidaković IT 67/17</p>
         </div>
     </div>
+
 </asp:Content>

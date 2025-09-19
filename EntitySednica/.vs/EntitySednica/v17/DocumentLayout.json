@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Penguin\\Desktop\\EntitySednica\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{18FA4CFA-614C-4CA0-BC38-FAF674C95AD0}|EntitySednica\\EntitySednica.csproj|c:\\users\\penguin\\desktop\\entitysednica\\entitysednica\\configuration\\databaseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18FA4CFA-614C-4CA0-BC38-FAF674C95AD0}|EntitySednica\\EntitySednica.csproj|solutionrelative:entitysednica\\configuration\\databaseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatabaseConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Penguin\\Desktop\\EntitySednica\\EntitySednica\\Configuration\\DatabaseConfig.cs",
+              "RelativeDocumentMoniker": "EntitySednica\\Configuration\\DatabaseConfig.cs",
+              "ToolTip": "C:\\Users\\Penguin\\Desktop\\EntitySednica\\EntitySednica\\Configuration\\DatabaseConfig.cs",
+              "RelativeToolTip": "EntitySednica\\Configuration\\DatabaseConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T21:13:13.597Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

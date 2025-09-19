@@ -115,6 +115,12 @@
             border-color: #ffeaa7;
         }
         
+        .alert-info {
+            color: #0c5460;
+            background-color: #d1ecf1;
+            border-color: #bee5eb;
+        }
+        
         .grid-container {
             margin-top: 20px;
         }

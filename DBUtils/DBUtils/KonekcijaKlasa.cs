@@ -120,7 +120,6 @@ namespace DBUtils
             }
             catch (Exception ex)
             {
-    
                 return false;
             }
         }

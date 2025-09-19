@@ -1,0 +1,206 @@
+@model List<KlaseMapiranja.MandatDTO>
+@{
+    ViewData["Title"] = "Pogledaj Mandate";
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5">👥 Pogledaj Mandate</h1>
+            <p class="lead">Pregled svih mandata poslanika sa detaljima o strankama i pozicijama</p>
+        </div>
+    </div>
+
+    @if (ViewBag.Greska != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <strong>Greška:</strong> @ViewBag.Greska
+        </div>
+    }
+
+    @if (ViewBag.Poruka != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @ViewBag.Poruka
+        </div>
+    }
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID Mandata</th>
+                        <th>Poslanik</th>
+                        <th>Stranka</th>
+                        <th>Pozicija</th>
+                        <th>Saziv</th>
+                        <th>Detalji</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var mandat in Model)
+                    {
+                        <tr>
+                            <td>
+                                <span class="badge bg-secondary">@mandat.Id</span>
+                            </td>
+                            <td>
+                                <div>
+                                    <strong>@(mandat.ImeLica ?? "Nepoznato") @(mandat.PrezimeLica ?? "")</strong>
+                                    <br>
+                                    <small class="text-muted">ID: @mandat.IdLica</small>
+                                </div>
+                            </td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(mandat.NazivStranke))
+                                {
+                                    <span class="badge bg-info">@mandat.NazivStranke</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Nepoznata stranka</span>
+                                }
+                            </td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(mandat.NazivPozicije))
+                                {
+                                    @switch (mandat.NazivPozicije.ToLower())
+                                    {
+                                        case "predsednik":
+                                            <span class="badge bg-danger">@mandat.NazivPozicije</span>
+                                            break;
+                                        case "potpredsednik":
+                                            <span class="badge bg-warning">@mandat.NazivPozicije</span>
+                                            break;
+                                        case "poslanik":
+                                            <span class="badge bg-primary">@mandat.NazivPozicije</span>
+                                            break;
+                                        default:
+                                            <span class="badge bg-secondary">@mandat.NazivPozicije</span>
+                                            break;
+                                    }
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Nepoznata pozicija</span>
+                                }
+                            </td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(mandat.NazivSaziva))
+                                {
+                                    <span class="badge bg-success">@mandat.NazivSaziva</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Nepoznat saziv</span>
+                                }
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-sm btn-outline-primary" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#mandatModal@(mandat.Id)">
+                                        <i class="bi bi-eye"></i> Detalji
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal za detalje mandata -->
+        @foreach (var mandat in Model)
+        {
+            <div class="modal fade" id="mandatModal@(mandat.Id)" tabindex="-1" aria-labelledby="mandatModalLabel@(mandat.Id)" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="mandatModalLabel@(mandat.Id)">
+                                Detalji mandata #@mandat.Id
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong>ID Mandata:</strong><br>
+                                    <span class="badge bg-secondary">@mandat.Id</span>
+                                </div>
+                                <div class="col-6">
+                                    <strong>ID Lica:</strong><br>
+                                    <span class="badge bg-primary">@mandat.IdLica</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong>ID Saziva:</strong><br>
+                                    <span class="badge bg-success">@mandat.IdSaziva</span>
+                                </div>
+                                <div class="col-6">
+                                    <strong>ID Stranke:</strong><br>
+                                    <span class="badge bg-info">@mandat.IdStranke</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-12">
+                                    <strong>Ime i Prezime:</strong><br>
+                                    <span class="h6">@(mandat.ImeLica ?? "Nepoznato") @(mandat.PrezimeLica ?? "")</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong>Stranka:</strong><br>
+                                    <span class="text-info">@(mandat.NazivStranke ?? "Nepoznata")</span>
+                                </div>
+                                <div class="col-6">
+                                    <strong>Pozicija:</strong><br>
+                                    <span class="text-warning">@(mandat.NazivPozicije ?? "Nepoznata")</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-12">
+                                    <strong>Saziv:</strong><br>
+                                    <span class="text-success">@(mandat.NazivSaziva ?? "Nepoznat")</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="alert alert-info">
+                    <strong>Ukupno mandata:</strong> @Model.Count
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning" role="alert">
+            <h5>Nema podataka</h5>
+            <p>Trenutno nema mandata za prikaz.</p>
+        </div>
+    }
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">
+                ← Nazad na početnu
+            </a>
+        </div>
+    </div>
+</div>
