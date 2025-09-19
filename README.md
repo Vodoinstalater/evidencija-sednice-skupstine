@@ -9,12 +9,11 @@ There are Database files already given, and in DBUtils just change to your own d
 
 The project has following:
 
-Export to Print (With and without parameters)
-Export to Excel (With and without parameters)
-Rest Web Service, (Connected to MVC Project with API demo included for fetching JSON data)
-SOAP Web Service (Connected to Web Forms)
-MVC Project (Simple alternative view to Web Forms, uses the same functions from 3 layers under)
-JavaScript UI Validation
-Entity Framework (Only for creating database)
-Uses Stored Procedures in database
-
+    - Export to Print (With and without parameters)
+    - Export to Excel (With and without parameters)
+    - Rest Web Service, (Connected to MVC Project with API demo included for fetching JSON data)
+    - SOAP Web Service (Connected to Web Forms)
+    - MVC Project (Simple alternative view to Web Forms, uses the same functions from 3 layers under)
+    - JavaScript UI Validation
+    - Entity Framework (Only for creating database)
+    - Uses Stored Procedures in database
